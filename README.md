@@ -1,6 +1,11 @@
 # 🧠 Awesome Papers on Scalable Oversight
 
-Automatically updated from [Notion Database](https://www.notion.so/).
+This repository is a curated collection of research papers on **Scalable Oversight**, an emerging area in AI and machine learning that focuses on designing methods to reliably supervise and evaluate AI systems at scale. 
+
+The list is **automatically updated and filtered from a Notion database** to highlight the most relevant and impactful research in this domain.
+
+If you are exploring **AI alignment**, **human-in-the-loop training**, or **robust AI oversight techniques**, this repository serves as a quick reference and starting point for your research journey.
+
 
 <small>
 
