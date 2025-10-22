@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  paper-agent:
+    build: .
+    container_name: arxiv-paper-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=INFO
+      - CHECK_FREQUENCY=daily
+      - CHECK_TIME=09:00
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('https://api.openai.com/v1/models', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - paper-agent-network
+
+  # Optional: Add a monitoring service
+  paper-agent-monitor:
+    image: nginx:alpine
+    container_name: paper-agent-monitor
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./monitoring/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./logs:/var/log/nginx/logs:ro
+    depends_on:
+      - paper-agent
+    networks:
+      - paper-agent-network
+
+networks:
+  paper-agent-network:
+    driver: bridge
+
+volumes:
+  logs:
+  data:
