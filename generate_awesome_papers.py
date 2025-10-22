@@ -30,12 +30,11 @@ def parse_date(date_str):
 def generate_markdown_table(papers):
     md = "# 🧠 Awesome Papers on Scalable Oversight\n\n"
     md += "Automatically updated from [Notion Database](https://www.notion.so/).\n\n"
-    # wrap table in <small> for smaller font
+    # Wrap table in <small> for smaller font
     md += "<small>\n\n"
     md += "| # | 🧠 Title | 📅 Published Date | 🔗 arXiv URL | 💡 Key Insights |\n"
     md += "|---|-----------|------------------|--------------|----------------|\n"
 
-    # Extract and filter papers (Relevance Score >=7)
     filtered_papers = []
     for paper in papers:
         props = paper["properties"]
@@ -44,9 +43,14 @@ def generate_markdown_table(papers):
         pub_date = props.get("Published Date", {}).get("date", {}).get("start", None)
         arxiv_url = extract_text(props.get("arXiv URL", {}).get("rich_text", []))
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
-        relevance = props.get("Relevance Score", {}).get("number", None)
+        relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        if relevance is None or relevance < 7:
+        # Extract tags (multi-select)
+        tags_list = [t["name"].lower() for t in props.get("Tags", {}).get("multi_select", [])]
+
+        # Filtering logic
+        keep_paper = ("scalable oversight" in tags_list) or (relevance > 7)
+        if not keep_paper:
             continue
 
         filtered_papers.append({
@@ -59,7 +63,7 @@ def generate_markdown_table(papers):
     # Sort by Published Date descending
     filtered_papers.sort(key=lambda x: parse_date(x["pub_date"]), reverse=True)
 
-    # Add index column
+    # Generate table with index
     for idx, paper in enumerate(filtered_papers, 1):
         title = paper["title"]
         pub_date = paper["pub_date"] or "N/A"
