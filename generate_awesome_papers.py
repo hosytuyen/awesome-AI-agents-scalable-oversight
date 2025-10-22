@@ -66,7 +66,7 @@ def generate_markdown_table(papers):
         arxiv_url = paper["arxiv_url"]
         key_insights = paper["key_insights"]
 
-        md += f"| {idx} | [{title}]({arxiv_url}) | {pub_date} | [Link]({arxiv_url}) | {key_insights} | {methodology} |\n"
+        md += f"| {idx} | [{title}]({arxiv_url}) | {pub_date} | [Link]({arxiv_url}) | {key_insights} |\n"
 
     md += "\n</small>"
 
