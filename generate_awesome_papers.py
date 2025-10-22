@@ -4,6 +4,8 @@ import requests
 NOTION_API_KEY = os.getenv("NOTION_API_KEY")
 DATABASE_ID = os.getenv("NOTION_DATABASE_ID")
 
+# print(NOTION_API_KEY); print(DATABASE_ID); exit()
+
 headers = {
     "Authorization": f"Bearer {NOTION_API_KEY}",
     "Notion-Version": "2022-06-28",
