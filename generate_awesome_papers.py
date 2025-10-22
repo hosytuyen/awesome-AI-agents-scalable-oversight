@@ -32,8 +32,8 @@ def generate_markdown_table(papers):
     md += "Automatically updated from [Notion Database](https://www.notion.so/).\n\n"
     # wrap table in <small> for smaller font
     md += "<small>\n\n"
-    md += "| # | 🧠 Title | 📅 Published Date | 🔗 arXiv URL | 💡 Key Insights | ⚙️ Methodology |\n"
-    md += "|---|-----------|------------------|--------------|----------------|----------------|\n"
+    md += "| # | 🧠 Title | 📅 Published Date | 🔗 arXiv URL | 💡 Key Insights |\n"
+    md += "|---|-----------|------------------|--------------|----------------|\n"
 
     # Extract and filter papers (Relevance Score >=7)
     filtered_papers = []
@@ -44,7 +44,6 @@ def generate_markdown_table(papers):
         pub_date = props.get("Published Date", {}).get("date", {}).get("start", None)
         arxiv_url = extract_text(props.get("arXiv URL", {}).get("rich_text", []))
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
-        methodology = extract_text(props.get("Methodology", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", None)
 
         if relevance is None or relevance < 7:
@@ -55,7 +54,6 @@ def generate_markdown_table(papers):
             "pub_date": pub_date,
             "arxiv_url": arxiv_url,
             "key_insights": key_insights.replace("\n", " ").strip(),
-            "methodology": methodology.replace("\n", " ").strip(),
         })
 
     # Sort by Published Date descending
@@ -67,7 +65,6 @@ def generate_markdown_table(papers):
         pub_date = paper["pub_date"] or "N/A"
         arxiv_url = paper["arxiv_url"]
         key_insights = paper["key_insights"]
-        methodology = paper["methodology"]
 
         md += f"| {idx} | [{title}]({arxiv_url}) | {pub_date} | [Link]({arxiv_url}) | {key_insights} | {methodology} |\n"
 
