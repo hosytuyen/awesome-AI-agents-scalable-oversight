@@ -1,0 +1,36 @@
+name: Update Awesome Papers
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # runs once daily at 12:00 UTC
+  workflow_dispatch:      # allows manual runs
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run Notion fetch script
+      env:
+        NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+      run: python generate_awesome_papers.py
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add README.md
+        git commit -m "Auto-update awesome papers from Notion" || echo "No changes to commit"
+        git push
