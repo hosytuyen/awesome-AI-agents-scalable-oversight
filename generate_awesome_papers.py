@@ -1,8 +1,8 @@
 import os
 import requests
 
-NOTION_API_KEY = os.getenv("ntn_K901518007043CzCpIdRLGbUtT31IdLaJK7LlkcJAwO0ik")
-DATABASE_ID = os.getenv("29321958bb2680d7ba2be2affd4a0445")
+NOTION_API_KEY = os.getenv("NOTION_API_KEY")
+DATABASE_ID = os.getenv("NOTION_DATABASE_ID")
 
 headers = {
     "Authorization": f"Bearer {NOTION_API_KEY}",
@@ -16,7 +16,6 @@ def get_database_items():
     return response.json()["results"]
 
 def extract_text(rich_text):
-    """Helper function to extract plain text from Notion rich_text fields"""
     return "".join([t["plain_text"] for t in rich_text]) if rich_text else ""
 
 def generate_markdown_table(papers):
@@ -35,12 +34,10 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         methodology = extract_text(props.get("Methodology", {}).get("rich_text", []))
 
-        # Sanitize long text (optional)
         abstract = abstract.replace("\n", " ").strip()
         key_insights = key_insights.replace("\n", " ").strip()
         methodology = methodology.replace("\n", " ").strip()
 
-        # Format markdown table row
         md += f"| [{title}]({arxiv_url}) | {abstract} | {pub_date} | [Link]({arxiv_url}) | {key_insights} | {methodology} |\n"
 
     with open("README.md", "w", encoding="utf-8") as f:
