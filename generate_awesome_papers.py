@@ -41,9 +41,12 @@ def generate_markdown_table(papers):
 
         title = extract_text(props["Title"]["title"])
         pub_date = props.get("Published Date", {}).get("date", {}).get("start", None)
-        arxiv_url = extract_text(props.get("arXiv URL", {}).get("rich_text", []))
+        arxiv_url = props.get("ArXiv URL", {}).get("url", "")
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
+
+        print(arxiv_url)
+
 
         # Extract tags (multi-select)
         tags_list = [t["name"].lower() for t in props.get("Tags", {}).get("multi_select", [])]
