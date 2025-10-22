@@ -45,7 +45,7 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        print(arxiv_url)
+        # print(arxiv_url)
 
 
         # Extract tags (multi-select)

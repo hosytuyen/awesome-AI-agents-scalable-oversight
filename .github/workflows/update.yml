@@ -2,7 +2,7 @@ name: Update Awesome Papers
 
 on:
   schedule:
-    - cron: "0 12 * * *"  # runs once daily at 12:00 UTC
+    - cron: "*/5 * * * *"  # runs every hour at minute 0
   workflow_dispatch:      # allows manual runs
 
 jobs:
