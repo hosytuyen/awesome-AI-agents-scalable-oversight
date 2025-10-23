@@ -1,6 +1,10 @@
 # 🧠 Awesome Papers on Scalable Oversight
 
-A curated collection of research papers on **Scalable Oversight**Automatically updated database from arXiv to minitor the latest developments in the field.*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*
+A curated collection of research papers on **Scalable Oversight**
+
+Automatically updated database from arXiv to minitor the latest developments in the field.
+
+*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*
 
 <small>
 
