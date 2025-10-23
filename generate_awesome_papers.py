@@ -29,8 +29,8 @@ def parse_date(date_str):
 
 def generate_markdown_table(papers):
     md = "# 🧠 Awesome Papers on Scalable Oversight\n\n"
-    md += "A curated collection of research papers on **Scalable Oversight**, highlighting methods to supervise and evaluate AI systems reliably at scale."
-    md += "Automatically updated from a Notion database, each entry includes a summary, publication date, and arXiv link to help researchers and practitioners stay up-to-date with the latest developments."
+    md += "A curated collection of research papers on **Scalable Oversight**"
+    md += "Automatically updated database from arXiv to minitor the latest developments in the field."
     md += "*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*"
     md += "\n\n"
     # Wrap table in <small> for smaller font
