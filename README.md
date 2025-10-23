@@ -1,12 +1,6 @@
 # 🧠 Awesome Papers on Scalable Oversight
 
-A curated collection of research papers on **Scalable Oversight**, highlighting methods to supervise and evaluate AI systems reliably at scale.   
-
-Automatically updated from a Notion database, each entry includes a summary, publication date, and arXiv link to help researchers and practitioners stay up-to-date with the latest developments.  
-
-*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder!*
-
-
+A curated collection of research papers on **Scalable Oversight**Automatically updated database from arXiv to minitor the latest developments in the field.*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*
 
 <small>
 
