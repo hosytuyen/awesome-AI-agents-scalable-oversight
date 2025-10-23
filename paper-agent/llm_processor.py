@@ -37,7 +37,7 @@ class LLMProcessor:
         self.model = genai.GenerativeModel(model)
         self.model_name = model
     
-    def analyze_paper(self, paper) -> PaperAnalysis:
+    def analyze_paper(self, paper, main_query: str) -> PaperAnalysis:
         """
         Analyze a paper using LLM to extract insights, tags.
         
@@ -48,7 +48,7 @@ class LLMProcessor:
             PaperAnalysis object with LLM insights
         """
         try:
-            prompt = self._create_analysis_prompt(paper)
+            prompt = self._create_analysis_prompt(paper, main_query)
             full_prompt = f"{self._get_system_prompt()}\n\n{prompt}"
             
             response = self.model.generate_content(
@@ -110,10 +110,10 @@ class LLMProcessor:
             logger.error(f"Error extracting tags for paper {paper.title}: {e}")
             return ["AI", "Research"]
     
-    def _create_analysis_prompt(self, paper) -> str:
+    def _create_analysis_prompt(self, paper, main_query: str) -> str:
         """Create the analysis prompt for the paper."""
         return f"""
-        Analyze this research paper for relevance to AI agent scalable oversight:
+        Analyze this research paper for relevance to AI agent {main_query}:
         
         Title: {paper.title}
         Authors: {', '.join(paper.authors)}
@@ -122,7 +122,7 @@ class LLMProcessor:
         
         Please provide:
         2. 3-5 relevant tags
-        3. Relevance score (0-10) for scalable oversight
+        3. Relevance score (0-10) for {main_query}
         4. Key insights (2-3 points)
         5. Methodology used (in paragraph format)
         

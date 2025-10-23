@@ -191,9 +191,12 @@ class PaperAgent:
                     if self.notion_manager._paper_exists(paper.arxiv_id):
                         logger.info(f"Paper {paper.arxiv_id} already exists in database, skipping LLM analysis")
                         continue
+
+                    if paper.arxiv_id == "2508.19461":
+                        print("2508.19461"); exit()
                     
                     # Analyze paper
-                    analysis = self.llm_processor.analyze_paper(paper)
+                    analysis = self.llm_processor.analyze_paper(paper, self.config["main_query"])
                     
                     # Check if paper should be included based on tags
                     if not self._should_include_paper(analysis):
