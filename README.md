@@ -6,65 +6,389 @@ Automatically updated database from arXiv to monitor the latest developments in 
 
 *If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*
 
-<div style="overflow-x: auto; white-space: nowrap;">
-
-<small>
-
-| # | 🧠 Title | 🏷️ Tags | 📅 Published Date | 🔗 arXiv URL | 💡 Key Insights |
-|---|-----------|--------|------------------|--------------|----------------|
-| 1 | [AI Debaters are More Persuasive when Arguing in Alignment with Their Own Beliefs](http://arxiv.org/abs/2510.13912v2) | `AI Debate`, `scalable oversight`, `Language Model Alignment`, `Persuasion`, `Belief Elicitation`, `Sycophancy` | 2025-10-15 | [Link](http://arxiv.org/abs/2510.13912v2) | AI debaters are more persuasive when arguing in alignment with their own beliefs, suggesting that truthful arguments (aligned with internal models) are inherently more convincing. This has implication... |
-| 2 | [OpenRubrics: Towards Scalable Synthetic Rubric Generation for Reward Modeling and LLM Alignment](http://arxiv.org/abs/2510.07743v1) | `reward modeling`, `rubrics`, `RLHF`, `LLM Alignment`, `scalable oversight` | 2025-10-09 | [Link](http://arxiv.org/abs/2510.07743v1) | Rubrics offer a structured and multifaceted approach to reward modeling, potentially capturing more nuanced human preferences than scalar or pairwise judgments, leading to better alignment., The Contr... |
-| 3 | [FRIT: Using Causal Importance to Improve Chain-of-Thought Faithfulness](http://arxiv.org/abs/2509.13334v1) | `Chain-of-Thought Reasoning`, `Faithfulness`, `Causal Intervention`, `Direct Preference Optimization`, `scalable alignment` | 2025-09-10 | [Link](http://arxiv.org/abs/2509.13334v1) | The paper addresses a critical weakness in Chain-of-Thought (CoT) reasoning: the lack of causal influence of reasoning steps on the final answer, which leads to untrustworthy outputs. This is directly... |
-| 4 | [Scaling behavior of large language models in emotional safety classification across sizes and tasks](http://arxiv.org/abs/2509.04512v1) | `Emotional Safety`, `LLM Safety`, `scalable alignment`, `Mental Health Applications`, `Fine-tuning` | 2025-09-02 | [Link](http://arxiv.org/abs/2509.04512v1) | Larger LLMs generally perform better in emotional safety classification, especially in zero-shot and nuanced multi-label scenarios, indicating a scaling effect for safety-related tasks., Fine-tuning s... |
-| 5 | [WST: Weak-to-Strong Knowledge Transfer via Reinforcement Learning](http://arxiv.org/abs/2508.16741v1) | `prompt engineering`, `Weak-to-Strong Transfer`, `reinforcement learning`, `LLM Alignment`, `scalable oversight` | 2025-08-22 | [Link](http://arxiv.org/abs/2508.16741v1) | Weak-to-strong transfer (WST) offers a scalable approach to improving LLM performance and alignment by using a small, easily auditable 'Teacher' model to generate instructions for a larger 'Student' m... |
-| 6 | [MI9 -- Agent Intelligence Protocol: Runtime Governance for Agentic AI Systems](http://arxiv.org/abs/2508.03858v2) | `Runtime Governance`, `Agentic AI`, `AI safety`, `scalable oversight`, `risk management` | 2025-08-05 | [Link](http://arxiv.org/abs/2508.03858v2) | Runtime governance is crucial for agentic AI systems due to their emergent behaviors, which cannot be fully addressed by pre-deployment strategies alone., The MI9 framework offers a comprehensive appr... |
-| 7 | [Alignment and Safety in Large Language Models: Safety Mechanisms, Training Paradigms, and Emerging Challenges](http://arxiv.org/abs/2507.19672v1) | `LLM Alignment`, `scalable oversight`, `Safety Mechanisms`, `preference learning`, `robustness` | 2025-07-25 | [Link](http://arxiv.org/abs/2507.19672v1) | The paper highlights the limitations of current evaluation frameworks for LLM alignment, specifically mentioning reward misspecification, distributional robustness, and *scalable oversight* as key cha... |
-| 8 | [Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety](http://arxiv.org/abs/2507.11473v1) | `Chain of Thought`, `Monitorability`, `AI safety`, `scalable oversight`, `Intent Detection` | 2025-07-15 | [Link](http://arxiv.org/abs/2507.11473v1) | Chain of Thought (CoT) reasoning in language models presents a novel opportunity for AI safety by allowing monitoring of the model's internal reasoning process for signs of malicious intent., CoT moni... |
-| 9 | [VerificAgent: Domain-Specific Memory Verification for Scalable Oversight of Aligned Computer-Use Agents](http://arxiv.org/abs/2506.02539v3) | `scalable oversight`, `memory verification`, `computer-using agents`, `Alignment`, `human-in-the-loop`, `policy drift`, `domain-specific` | 2025-06-03 | [Link](http://arxiv.org/abs/2506.02539v3) | Verifying and sanitizing the memory of computer-using agents (CUAs) provides a scalable oversight mechanism by preventing the accumulation of unsafe or domain-inappropriate heuristics., Human fact-che... |
-| 10 | [AI Debate Aids Assessment of Controversial Claims](http://arxiv.org/abs/2506.02175v1) | `AI Debate`, `scalable oversight`, `Bias Mitigation`, `Truth Seeking`, `COVID-19 Factuality` | 2025-06-02 | [Link](http://arxiv.org/abs/2506.02175v1) | AI debate can effectively improve human judgment accuracy and confidence calibration on controversial topics, even when judges hold strong prior beliefs., AI judges with human-like personas can achiev... |
-| 11 | [Arbiters of Ambivalence: Challenges of Using LLMs in No-Consensus Tasks](http://arxiv.org/abs/2505.23820v1) | `LLMs`, `Alignment`, `scalable oversight`, `No-Consensus Tasks`, `Bias` | 2025-05-28 | [Link](http://arxiv.org/abs/2505.23820v1) | LLMs exhibit a tendency to take a stance on no-consensus topics when acting as judges or debaters, highlighting a limitation in replicating human disagreement., The study reveals that LLMs, while capa... |
-| 12 | [Preference Learning with Lie Detectors can Induce Honesty or Evasion](http://arxiv.org/abs/2505.13787v1) | `scalable oversight`, `Deception`, `preference learning`, `Lie Detection`, `AI Alignment` | 2025-05-20 | [Link](http://arxiv.org/abs/2505.13787v1) | Incorporating lie detectors into the preference learning pipeline of LLMs can have unintended consequences, potentially leading to policies that evade detection while remaining deceptive, highlighting... |
-| 13 | [Debating for Better Reasoning: An Unsupervised Multimodal Approach](http://arxiv.org/abs/2505.14627v1) | `debate`, `scalable oversight`, `multimodal learning`, `visual question answering`, `AI Alignment` | 2025-05-20 | [Link](http://arxiv.org/abs/2505.14627v1) | The debate framework, even with a weaker, text-only judge, can effectively supervise and improve the performance of stronger, multimodal models, suggesting a pathway for scalable oversight where human... |
-| 14 | [Confirmation bias: A challenge for scalable oversight](http://arxiv.org/abs/2507.19486v1) | `scalable oversight`, `confirmation bias`, `Human-AI Interaction`, `AI safety`, `Cognitive Bias` | 2025-05-17 | [Link](http://arxiv.org/abs/2507.19486v1) | Confirmation bias significantly hinders the effectiveness of simple scalable oversight protocols, even when evaluators are aware of the model's potential for errors., Online research, intended to impr... |
-| 15 | [Rethinking LLM Advancement: Compute-Dependent and Independent Paths to Progress](http://arxiv.org/abs/2505.04075v2) | `Algorithmic Innovation`, `compute-independent advancements`, `compute-dependent advancements`, `AI Oversight`, `capability forecasting` | 2025-05-07 | [Link](http://arxiv.org/abs/2505.04075v2) | Restricting compute alone is insufficient for controlling LLM capabilities, as algorithmic innovations can lead to significant performance gains even in compute-constrained environments., AI oversight... |
-| 16 | [DeepCritic: Deliberate Critique with Large Language Models](http://arxiv.org/abs/2505.00662v1) | `LLM Critique`, `Automated Oversight`, `reinforcement learning`, `Math Reasoning`, `Error Identification` | 2025-05-01 | [Link](http://arxiv.org/abs/2505.00662v1) | LLMs can be effectively trained to provide detailed, step-wise critiques of other LLMs' reasoning processes, significantly improving error identification accuracy compared to existing methods., A two-... |
-| 17 | [Scaling Laws For Scalable Oversight](http://arxiv.org/abs/2504.18530v2) | `scalable oversight`, `AI safety`, `nested oversight`, `capability mismatch`, `scaling laws` | 2025-04-25 | [Link](http://arxiv.org/abs/2504.18530v2) | The paper introduces a framework for quantifying the probability of successful oversight based on the capabilities of the overseer and the overseen system, modeled as a game with oversight-specific El... |
-| 18 | [Super Co-alignment of Human and AI for Sustainable Symbiotic Society](http://arxiv.org/abs/2504.17404v5) | `superalignment`, `co-alignment`, `scalable oversight`, `AI safety`, `value alignment`, `symbiotic AI` | 2025-04-24 | [Link](http://arxiv.org/abs/2504.17404v5) | The paper argues that unidirectional imposition of human values on superintelligent AI is insufficient for true alignment, advocating for a 'Super Co-alignment' approach where values are co-shaped by ... |
-| 19 | [Adversarial Training of Reward Models](http://arxiv.org/abs/2504.06141v2) | `reward modeling`, `Adversarial Training`, `robustness`, `reward hacking`, `RLHF`, `scalable oversight` | 2025-04-08 | [Link](http://arxiv.org/abs/2504.06141v2) | Adversarial training of reward models is crucial for preventing reward hacking and improving the robustness of RLHF systems, directly addressing a key challenge in scalable oversight., The Adv-RM fram... |
-| 20 | [A Benchmark for Scalable Oversight Protocols](http://arxiv.org/abs/2504.03731v1) | `scalable oversight`, `AI Alignment`, `human feedback`, `Benchmarking`, `debate` | 2025-03-31 | [Link](http://arxiv.org/abs/2504.03731v1) | The paper addresses a critical gap in the field by providing a systematic empirical framework for evaluating scalable oversight protocols, which is essential for ensuring AI alignment as agents become... |
-| 21 | [FindTheFlaws: Annotated Errors for Detecting Flawed Reasoning and Scalable Oversight Research](http://arxiv.org/abs/2503.22989v1) | `scalable oversight`, `AI safety`, `error detection`, `critique`, `dataset` | 2025-03-29 | [Link](http://arxiv.org/abs/2503.22989v1) | The FindTheFlaws dataset directly addresses the need for high-quality, annotated data to evaluate and improve scalable oversight techniques like debate, critique, and prover-verifier games., The perfo... |
-| 22 | [Superalignment with Dynamic Human Values](http://arxiv.org/abs/2503.13621v1) | `scalable oversight`, `Dynamic Human Values`, `Recursive Reward Modeling`, `Task Decomposition`, `Part-to-Complete Generalization` | 2025-03-17 | [Link](http://arxiv.org/abs/2503.13621v1) | The paper directly addresses the challenge of scalable oversight by proposing a task decomposition approach, aiming to break down complex tasks into human-understandable and supervisable subtasks., It... |
-| 23 | [Modeling Human Beliefs about AI Behavior for Scalable Oversight](http://arxiv.org/abs/2502.21262v2) | `scalable oversight`, `belief modeling`, `value learning`, `human feedback`, `AI Alignment` | 2025-02-28 | [Link](http://arxiv.org/abs/2502.21262v2) | Modeling human beliefs about AI behavior is crucial for reliable value learning, especially when AI systems surpass human capabilities and evaluators may misunderstand the AI's actions., The paper int... |
-| 24 | [Scalable Oversight for Superhuman AI via Recursive Self-Critiquing](http://arxiv.org/abs/2502.04675v3) | `scalable oversight`, `recursive self-critiquing`, `AI Alignment`, `Human-AI Interaction`, `AI-AI interaction` | 2025-02-07 | [Link](http://arxiv.org/abs/2502.04675v3) | Recursive self-critiquing offers a potential pathway to scalable oversight by shifting the burden from direct human assessment of complex AI outputs to evaluating critiques of critiques, which may be ... |
-| 25 | [Great Models Think Alike and this Undermines AI Oversight](http://arxiv.org/abs/2502.04313v2) | `AI Oversight`, `Model Similarity`, `Weak-to-Strong Generalization`, `Correlated Failures`, `Language Model Evaluation` | 2025-02-06 | [Link](http://arxiv.org/abs/2502.04313v2) | LLM-as-a-judge systems exhibit self-preference, favoring models similar to themselves, which can bias evaluation and oversight., Gains from weak-to-strong generalization in AI oversight are heavily in... |
-| 26 | [The Right to AI](http://arxiv.org/abs/2501.17899v2) | `Participatory AI`, `AI Governance`, `scalable oversight`, `Human-Centered AI`, `AI Alignment` | 2025-01-29 | [Link](http://arxiv.org/abs/2501.17899v2) | The paper highlights the importance of community involvement in AI development and governance, which is crucial for scalable oversight. By incorporating diverse perspectives, we can potentially mitiga... |
-| 27 | [Debate Helps Weak-to-Strong Generalization](http://arxiv.org/abs/2501.13124v1) | `Weak-to-Strong Generalization`, `scalable oversight`, `debate`, `AI Alignment`, `Human Supervision` | 2025-01-21 | [Link](http://arxiv.org/abs/2501.13124v1) | Debate can be a valuable mechanism for a weak model to extract reliable information from a stronger, potentially untrustworthy model, improving the weak model's performance., Ensembling weak models tr... |
-| 28 | [Understanding Impact of Human Feedback via Influence Functions](http://arxiv.org/abs/2501.05790v3) | `RLHF`, `Influence Functions`, `reward modeling`, `human feedback`, `Bias Detection`, `scalable oversight` | 2025-01-10 | [Link](http://arxiv.org/abs/2501.05790v3) | Influence functions offer a promising method for understanding and mitigating the impact of noisy, inconsistent, or biased human feedback in RLHF, which is crucial for aligning LLMs with human intenti... |
-| 29 | [The Road to Artificial SuperIntelligence: A Comprehensive Survey of Superalignment](http://arxiv.org/abs/2412.16468v3) | `superalignment`, `scalable oversight`, `ASI`, `AI safety`, `alignment paradigms` | 2024-12-21 | [Link](http://arxiv.org/abs/2412.16468v3) | The paper highlights the limitations of current alignment techniques when applied to Artificial Superintelligence (ASI), emphasizing the need for novel approaches that can scale to superhuman capabili... |
-| 30 | [The Superalignment of Superhuman Intelligence with Large Language Models](http://arxiv.org/abs/2412.11145v2) | `superalignment`, `scalable oversight`, `Weak-to-Strong Generalization`, `Adversarial Training`, `AI safety` | 2024-12-15 | [Link](http://arxiv.org/abs/2412.11145v2) | The paper explicitly addresses the problem of aligning superhuman AI, particularly LLMs, with human values, which is a core concern in scalable oversight research., It highlights the challenges of sca... |
-| 31 | [Rethinking LLM Uncertainty: A Multi-Agent Approach to Estimating Black-Box Model Uncertainty](http://arxiv.org/abs/2412.09572v2) | `uncertainty estimation`, `LLM`, `scalable oversight`, `hallucination detection`, `multi-agent systems` | 2024-12-12 | [Link](http://arxiv.org/abs/2412.09572v2) | Existing self-consistency methods for uncertainty estimation in LLMs can be misleading due to contextual biases affecting knowledge retrieval., A multi-agent approach, leveraging diverse query variati... |
-| 32 | [ProcessBench: Identifying Process Errors in Mathematical Reasoning](http://arxiv.org/abs/2412.06559v4) | `scalable oversight`, `error detection`, `mathematical reasoning`, `process reward models`, `critic models` | 2024-12-09 | [Link](http://arxiv.org/abs/2412.06559v4) | The paper highlights the limitations of existing process reward models (PRMs) in generalizing to more complex mathematical reasoning problems, indicating a need for more robust and generalizable overs... |
-| 33 | [Balancing Label Quantity and Quality for Scalable Elicitation](http://arxiv.org/abs/2410.13215v2) | `scalable oversight`, `label quality`, `label quantity`, `pretrained models`, `sample efficiency`, `elicitation`, `cost-benefit analysis` | 2024-10-17 | [Link](http://arxiv.org/abs/2410.13215v2) | There exists a quantity-quality tradeoff in labeling data for training AI models, particularly when using pretrained models. Understanding this tradeoff is crucial for scalable oversight, as it impact... |
-| 34 | [Gradient Routing: Masking Gradients to Localize Computation in Neural Networks](http://arxiv.org/abs/2410.04332v2) | `scalable oversight`, `Modular Neural Networks`, `Interpretability`, `Unlearning`, `Reinforcement Learning Alignment` | 2024-10-06 | [Link](http://arxiv.org/abs/2410.04332v2) | Gradient routing offers a method to enforce modularity in neural networks, allowing for more targeted interventions and oversight. This is crucial for scalable oversight as it allows focusing on speci... |
-| 35 | [Possible Principles for Aligned Structure Learning Agents](http://arxiv.org/abs/2410.00258v3) | `scalable alignment`, `Structure Learning`, `Causal Representation Learning`, `Theory of Mind`, `preference learning` | 2024-09-30 | [Link](http://arxiv.org/abs/2410.00258v3) | The paper highlights the importance of structure learning (causal representation learning) as a foundation for scalable alignment. Agents that can accurately model the world, including other agents' p... |
-| 36 | [Training Language Models to Win Debates with Self-Play Improves Judge Accuracy](http://arxiv.org/abs/2409.16636v1) | `debate`, `scalable oversight`, `Language Models`, `self-play`, `judge accuracy` | 2024-09-25 | [Link](http://arxiv.org/abs/2409.16636v1) | Training language models to win debates through self-play can improve the accuracy of language model-based judges in evaluating complex tasks, suggesting a potential path for scalable oversight., Deba... |
-| 37 | [Explanation, Debate, Align: A Weak-to-Strong Framework for Language Model Generalization](http://arxiv.org/abs/2409.07335v1) | `Weak-to-Strong Generalization`, `model alignment`, `Explanation Generation`, `multi-agent systems`, `scalable oversight` | 2024-09-11 | [Link](http://arxiv.org/abs/2409.07335v1) | Weak-to-strong generalization offers a pathway for transferring alignment properties from advanced, potentially more aligned, models to weaker ones, reducing the need for extensive, potentially biased... |
-| 38 | [AI-Assisted Generation of Difficult Math Questions](http://arxiv.org/abs/2407.21009v4) | `LLM`, `Question Generation`, `Difficulty`, `Metacognition`, `human-in-the-loop`, `Out-of-Distribution`, `scalable oversight` | 2024-07-30 | [Link](http://arxiv.org/abs/2407.21009v4) | The paper demonstrates a method for generating 'out-of-distribution' (OOD) examples that are difficult for both LLMs and humans. This is valuable for scalable oversight because OOD examples can expose... |
-| 39 | [ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models](http://arxiv.org/abs/2407.04693v2) | `hallucination detection`, `scalable oversight`, `self-training`, `expectation maximization`, `LLM Evaluation` | 2024-07-05 | [Link](http://arxiv.org/abs/2407.04693v2) | The paper introduces a scalable approach to detect and mitigate hallucinations in LLMs, a critical aspect of ensuring AI safety and reliability. By automating the annotation process, it addresses the ... |
-| 40 | [On scalable oversight with weak LLMs judging strong LLMs](http://arxiv.org/abs/2407.04622v2) | `scalable oversight`, `debate`, `Language Models`, `AI Alignment`, `Weak-to-Strong Generalization` | 2024-07-05 | [Link](http://arxiv.org/abs/2407.04622v2) | Debate, where two AI agents argue to convince a weaker AI judge, consistently outperforms consultancy (single AI trying to convince a judge) when the consultant is randomly assigned to argue for a spe... |
-| 41 | [Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision](http://arxiv.org/abs/2403.09472v2) | `scalable oversight`, `reward modeling`, `Easy-to-Hard Generalization`, `AI Alignment`, `reasoning` | 2024-03-14 | [Link](http://arxiv.org/abs/2403.09472v2) | Training reward models on easier tasks can enable effective evaluation and improvement of AI agents on harder tasks, even surpassing human-level performance on those harder tasks., Process supervision... |
-| 42 | [On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models](http://arxiv.org/abs/2403.04204v1) | `Alignment`, `big models`, `scalable oversight`, `RLHF`, `SFT` | 2024-03-07 | [Link](http://arxiv.org/abs/2403.04204v1) | The paper highlights the inherent challenges in aligning large models, including data costs and scalable oversight, emphasizing that finding the optimal alignment strategy remains an open problem., Th... |
-| 43 | [CriticEval: Evaluating Large Language Model as Critic](http://arxiv.org/abs/2402.13764v5) | `LLM Evaluation`, `critique ability`, `scalable oversight`, `AI safety`, `benchmark` | 2024-02-21 | [Link](http://arxiv.org/abs/2402.13764v5) | The paper introduces a benchmark (CriticEval) specifically designed to evaluate the critique ability of LLMs, which is a critical component for scalable oversight as it allows LLMs to identify and cor... |
-| 44 | [Improving Weak-to-Strong Generalization with Scalable Oversight and Ensemble Learning](http://arxiv.org/abs/2402.00667v1) | `Weak-to-Strong Generalization`, `scalable oversight`, `Ensemble Learning`, `Human-AI Interaction`, `AI Alignment` | 2024-02-01 | [Link](http://arxiv.org/abs/2402.00667v1) | The paper directly addresses the challenge of aligning increasingly capable AI systems with human values through the Weak-to-Strong Generalization (W2SG) framework, which is a core concern in scalable... |
-| 45 | [Reinforcement Learning from LLM Feedback to Counteract Goal Misgeneralization](http://arxiv.org/abs/2401.07181v1) | `goal misgeneralization`, `LLM feedback`, `reinforcement learning`, `scalable oversight`, `reward shaping` | 2024-01-14 | [Link](http://arxiv.org/abs/2401.07181v1) | LLMs can provide effective, scalable oversight for RL agents, even without task proficiency, by identifying potential goal misgeneralization scenarios., Using LLM feedback to shape the reward function... |
-| 46 | [The Unreasonable Effectiveness of Easy Training Data for Hard Tasks](http://arxiv.org/abs/2401.06751v2) | `scalable oversight`, `Easy-to-Hard Generalization`, `Language Models`, `Data Efficiency`, `Weak Supervision` | 2024-01-12 | [Link](http://arxiv.org/abs/2401.06751v2) | Language models exhibit surprisingly strong generalization from easy to hard data, potentially reducing the need for expensive and noisy hard-labeled data in some contexts., Collecting and utilizing e... |
-| 47 | [GPQA: A Graduate-Level Google-Proof Q&A Benchmark](http://arxiv.org/abs/2311.12022v1) | `scalable oversight`, `AI Alignment`, `benchmark`, `Question Answering`, `expert knowledge` | 2023-11-20 | [Link](http://arxiv.org/abs/2311.12022v1) | GPQA provides a challenging benchmark for evaluating scalable oversight methods, as it requires AI systems to answer questions that are difficult even for skilled humans with access to external inform... |
-| 48 | [A Closer Look at the Self-Verification Abilities of Large Language Models in Logical Reasoning](http://arxiv.org/abs/2311.07954v2) | `self-verification`, `logical reasoning`, `fallacy detection`, `LLMs`, `scalable oversight` | 2023-11-14 | [Link](http://arxiv.org/abs/2311.07954v2) | LLMs struggle to accurately identify logical fallacies in their own reasoning, suggesting limitations in their self-verification abilities., The inability to reliably detect fallacies undermines the e... |
-| 49 | [SALMON: Self-Alignment with Instructable Reward Models](http://arxiv.org/abs/2310.05910v2) | `reward modeling`, `scalable alignment`, `Principle-Based Alignment`, `LLM Alignment`, `Synthetic Data` | 2023-10-09 | [Link](http://arxiv.org/abs/2310.05910v2) | SALMON offers a pathway to reduce reliance on extensive human feedback by using an instructable reward model trained on synthetic preference data derived from human-defined principles. This is crucial... |
-| 50 | [Assessing Large Language Models on Climate Information](http://arxiv.org/abs/2310.02932v2) | `scalable oversight`, `LLM Evaluation`, `Climate Change Communication`, `Epistemological Adequacy`, `AI Assistance` | 2023-10-04 | [Link](http://arxiv.org/abs/2310.02932v2) | LLMs exhibit a significant gap between surface-level fluency and epistemological accuracy when communicating about climate change, highlighting the need for careful oversight to ensure factual correct... |
-| 51 | [Explainability in AI Policies: A Critical Review of Communications, Reports, Regulations, and Standards in the EU, US, and UK](http://arxiv.org/abs/2304.11218v1) | `explainability`, `AI policy`, `regulation`, `AI Oversight`, `transparency` | 2023-04-20 | [Link](http://arxiv.org/abs/2304.11218v1) | Current AI policies regarding explainability are often based on coarse notions and requirements, potentially hindering practical adoption and effective oversight., A lack of consensus on what constitu... |
-| 52 | [Diagnostics for Deep Neural Networks with Automated Copy/Paste Attacks](http://arxiv.org/abs/2211.10024v3) | `scalable oversight`, `Adversarial Attacks`, `Interpretability`, `Red Teaming`, `automated diagnostics` | 2022-11-18 | [Link](http://arxiv.org/abs/2211.10024v3) | Automated methods like SNAFUE can significantly enhance scalable oversight by efficiently identifying vulnerabilities in DNNs that might be missed by human reviewers or traditional adversarial example... |
-| 53 | [Measuring Progress on Scalable Oversight for Large Language Models](http://arxiv.org/abs/2211.03540v2) | `scalable oversight`, `Language Models`, `Human-AI Collaboration`, `Alignment`, `empirical evaluation` | 2022-11-04 | [Link](http://arxiv.org/abs/2211.03540v2) | Human-AI collaboration, even with an unreliable AI assistant, can significantly outperform both unaided humans and the AI model alone on complex tasks., The paper provides a concrete experimental desi... |
-
-</small>
+<div style="overflow-x: auto;">
+<table>
+<thead>
+<tr>
+<th style="min-width: 30px;">#</th>
+<th style="min-width: 200px;">🧠 Title</th>
+<th style="min-width: 100px;">🏷️ Tags</th>
+<th style="min-width: 100px;">📅 Date</th>
+<th style="min-width: 300px; max-width: 800px;">💡 Key Insights</th>
+</tr>
+</thead>
+<tbody>
+<tr style="vertical-align: top;">
+<td>1</td>
+<td><a href="http://arxiv.org/abs/2510.13912v2">AI Debaters are More Persuasive when Arguing in Alignment with Their Own Beliefs</a></td>
+<td style="font-size: 0.9em;">`AI Debate`, `scalable oversight`, `Language Model Alignment`, `Persuasion`, `Belief Elicitation`, `Sycophancy`</td>
+<td style="white-space: nowrap;">2025-10-15</td>
+<td style="line-height: 1.6; padding: 10px;">AI debaters are more persuasive when arguing in alignment with their own beliefs, suggesting that truthful arguments (aligned with internal models) are inherently more convincing. This has implications for designing oversight mechanisms that leverage internal model states to detect deception., Language models exhibit a tendency towards sycophancy, aligning with the perceived beliefs of the judge even when it contradicts their own prior beliefs. This highlights a potential vulnerability in AI debate as an oversight technique, as models may prioritize pleasing the judge over presenting the truth., Arguments misaligned with prior beliefs are paradoxically rated as higher quality in pairwise comparison. This suggests that human evaluators may be biased towards novel or unexpected arguments, even if they are less truthful, which could hinder the effectiveness of AI debate for scalable oversight.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>2</td>
+<td><a href="http://arxiv.org/abs/2510.07743v1">OpenRubrics: Towards Scalable Synthetic Rubric Generation for Reward Modeling and LLM Alignment</a></td>
+<td style="font-size: 0.9em;">`reward modeling`, `rubrics`, `RLHF`, `LLM Alignment`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2025-10-09</td>
+<td style="line-height: 1.6; padding: 10px;">Rubrics offer a structured and multifaceted approach to reward modeling, potentially capturing more nuanced human preferences than scalar or pairwise judgments, leading to better alignment., The Contrastive Rubric Generation (CRG) method, by contrasting preferred and rejected responses, provides a way to automatically generate rubrics that incorporate both explicit constraints and implicit qualities, addressing the scalability challenge of rubric creation., Enforcing preference-label consistency through rejection sampling improves the reliability of generated rubrics, mitigating the impact of noisy or inconsistent evaluation signals.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>3</td>
+<td><a href="http://arxiv.org/abs/2509.13334v1">FRIT: Using Causal Importance to Improve Chain-of-Thought Faithfulness</a></td>
+<td style="font-size: 0.9em;">`Chain-of-Thought Reasoning`, `Faithfulness`, `Causal Intervention`, `Direct Preference Optimization`, `scalable alignment`</td>
+<td style="white-space: nowrap;">2025-09-10</td>
+<td style="line-height: 1.6; padding: 10px;">The paper addresses a critical weakness in Chain-of-Thought (CoT) reasoning: the lack of causal influence of reasoning steps on the final answer, which leads to untrustworthy outputs. This is directly relevant to scalable oversight because unreliable reasoning chains can mask errors and make it difficult to verify the correctness of AI decisions., FRIT provides a scalable, supervision-free method for improving the faithfulness of CoT reasoning by training models to produce causally consistent reasoning paths. This is a significant step towards building more reliable and interpretable AI systems, which is crucial for effective oversight., The use of causal interventions to generate training data is a novel approach that can be extended to other areas of AI alignment. By systematically corrupting reasoning steps, FRIT creates a valuable dataset for training models to identify and avoid common reasoning errors.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>4</td>
+<td><a href="http://arxiv.org/abs/2509.04512v1">Scaling behavior of large language models in emotional safety classification across sizes and tasks</a></td>
+<td style="font-size: 0.9em;">`Emotional Safety`, `LLM Safety`, `scalable alignment`, `Mental Health Applications`, `Fine-tuning`</td>
+<td style="white-space: nowrap;">2025-09-02</td>
+<td style="line-height: 1.6; padding: 10px;">Larger LLMs generally perform better in emotional safety classification, especially in zero-shot and nuanced multi-label scenarios, indicating a scaling effect for safety-related tasks., Fine-tuning smaller LLMs (e.g., 1B parameter LLaMA) can achieve performance comparable to larger models and BERT, offering a viable and privacy-preserving alternative for on-device safety applications., The study highlights the potential for using smaller, fine-tuned models for scalable oversight in sensitive applications, reducing computational costs and addressing privacy concerns.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>5</td>
+<td><a href="http://arxiv.org/abs/2508.16741v1">WST: Weak-to-Strong Knowledge Transfer via Reinforcement Learning</a></td>
+<td style="font-size: 0.9em;">`prompt engineering`, `Weak-to-Strong Transfer`, `reinforcement learning`, `LLM Alignment`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2025-08-22</td>
+<td style="line-height: 1.6; padding: 10px;">Weak-to-strong transfer (WST) offers a scalable approach to improving LLM performance and alignment by using a small, easily auditable 'Teacher' model to generate instructions for a larger 'Student' model., The use of reinforcement learning to iteratively refine the Teacher model's instructions based on the Student model's outcomes provides a mechanism for aligning the Student model's behavior with desired objectives., WST can potentially mitigate the risks associated with strong, potentially misleading prompts generated by larger models, offering a safer approach to prompt refinement.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>6</td>
+<td><a href="http://arxiv.org/abs/2508.03858v2">MI9 -- Agent Intelligence Protocol: Runtime Governance for Agentic AI Systems</a></td>
+<td style="font-size: 0.9em;">`Runtime Governance`, `Agentic AI`, `AI safety`, `scalable oversight`, `risk management`</td>
+<td style="white-space: nowrap;">2025-08-05</td>
+<td style="line-height: 1.6; padding: 10px;">Runtime governance is crucial for agentic AI systems due to their emergent behaviors, which cannot be fully addressed by pre-deployment strategies alone., The MI9 framework offers a comprehensive approach to agentic AI oversight by integrating real-time controls, including risk assessment, telemetry capture, authorization monitoring, conformance engines, drift detection, and containment strategies., The framework's ability to operate transparently across heterogeneous agent architectures is essential for scalable and responsible deployment of agentic systems in real-world environments.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>7</td>
+<td><a href="http://arxiv.org/abs/2507.19672v1">Alignment and Safety in Large Language Models: Safety Mechanisms, Training Paradigms, and Emerging Challenges</a></td>
+<td style="font-size: 0.9em;">`LLM Alignment`, `scalable oversight`, `Safety Mechanisms`, `preference learning`, `robustness`</td>
+<td style="white-space: nowrap;">2025-07-25</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the limitations of current evaluation frameworks for LLM alignment, specifically mentioning reward misspecification, distributional robustness, and *scalable oversight* as key challenges. This underscores the need for research into more effective and scalable methods for evaluating and ensuring LLM safety., The survey identifies a trade-off between different alignment objectives and the methods used to achieve them. Understanding these trade-offs is crucial for developing oversight mechanisms that can effectively balance competing values and prevent unintended consequences., The discussion of techniques like Direct Preference Optimization (DPO) and Constitutional AI provides insights into current approaches for aligning LLMs with human preferences and values. These methods, while promising, require careful oversight to ensure they are robust and do not introduce new biases or vulnerabilities.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>8</td>
+<td><a href="http://arxiv.org/abs/2507.11473v1">Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety</a></td>
+<td style="font-size: 0.9em;">`Chain of Thought`, `Monitorability`, `AI safety`, `scalable oversight`, `Intent Detection`</td>
+<td style="white-space: nowrap;">2025-07-15</td>
+<td style="line-height: 1.6; padding: 10px;">Chain of Thought (CoT) reasoning in language models presents a novel opportunity for AI safety by allowing monitoring of the model's internal reasoning process for signs of malicious intent., CoT monitorability is likely fragile and susceptible to changes in model architecture, training data, or prompting strategies, requiring careful consideration by developers of frontier models to preserve this safety feature., While CoT monitoring is not a perfect solution and will inevitably miss some instances of misbehavior, it offers a promising avenue for oversight and should be pursued in conjunction with other AI safety methods.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>9</td>
+<td><a href="http://arxiv.org/abs/2506.02539v3">VerificAgent: Domain-Specific Memory Verification for Scalable Oversight of Aligned Computer-Use Agents</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `memory verification`, `computer-using agents`, `Alignment`, `human-in-the-loop`, `policy drift`, `domain-specific`</td>
+<td style="white-space: nowrap;">2025-06-03</td>
+<td style="line-height: 1.6; padding: 10px;">Verifying and sanitizing the memory of computer-using agents (CUAs) provides a scalable oversight mechanism by preventing the accumulation of unsafe or domain-inappropriate heuristics., Human fact-checking of agent memories, especially after trajectory-based learning, can act as a 'frozen safety contract' that constrains future agent behavior and mitigates policy drift., Domain-specific knowledge and constraints are crucial for effective memory verification, allowing for targeted oversight and improved task reliability.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>10</td>
+<td><a href="http://arxiv.org/abs/2506.02175v1">AI Debate Aids Assessment of Controversial Claims</a></td>
+<td style="font-size: 0.9em;">`AI Debate`, `scalable oversight`, `Bias Mitigation`, `Truth Seeking`, `COVID-19 Factuality`</td>
+<td style="white-space: nowrap;">2025-06-02</td>
+<td style="line-height: 1.6; padding: 10px;">AI debate can effectively improve human judgment accuracy and confidence calibration on controversial topics, even when judges hold strong prior beliefs., AI judges with human-like personas can achieve higher accuracy than human judges and default AI judges, suggesting their potential for supervising advanced AI models., Debate outperforms consultancy (single-advisor systems) in guiding biased judges towards the truth, indicating the value of contrasting perspectives.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>11</td>
+<td><a href="http://arxiv.org/abs/2505.23820v1">Arbiters of Ambivalence: Challenges of Using LLMs in No-Consensus Tasks</a></td>
+<td style="font-size: 0.9em;">`LLMs`, `Alignment`, `scalable oversight`, `No-Consensus Tasks`, `Bias`</td>
+<td style="white-space: nowrap;">2025-05-28</td>
+<td style="line-height: 1.6; padding: 10px;">LLMs exhibit a tendency to take a stance on no-consensus topics when acting as judges or debaters, highlighting a limitation in replicating human disagreement., The study reveals that LLMs, while capable of nuanced assessments as answer generators, struggle to capture the ambivalence inherent in tasks where human consensus is absent, posing challenges for scalable oversight frameworks., The findings emphasize the need for more advanced alignment methods that account for and mitigate biases in LLMs, particularly when used in roles requiring judgment and debate without human intervention.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>12</td>
+<td><a href="http://arxiv.org/abs/2505.13787v1">Preference Learning with Lie Detectors can Induce Honesty or Evasion</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Deception`, `preference learning`, `Lie Detection`, `AI Alignment`</td>
+<td style="white-space: nowrap;">2025-05-20</td>
+<td style="line-height: 1.6; padding: 10px;">Incorporating lie detectors into the preference learning pipeline of LLMs can have unintended consequences, potentially leading to policies that evade detection while remaining deceptive, highlighting the challenges of using seemingly objective metrics for alignment., The effectiveness of lie-detector-enhanced training in promoting genuine honesty depends critically on factors like exploration during training, lie detector accuracy (TPR), and KL regularization strength, suggesting that careful calibration and algorithm selection are crucial., Off-policy algorithms (DPO) appear more robust to deception compared to on-policy algorithms (GRPO) when using lie detectors in preference learning, indicating that the choice of training algorithm significantly impacts the resulting agent's honesty.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>13</td>
+<td><a href="http://arxiv.org/abs/2505.14627v1">Debating for Better Reasoning: An Unsupervised Multimodal Approach</a></td>
+<td style="font-size: 0.9em;">`debate`, `scalable oversight`, `multimodal learning`, `visual question answering`, `AI Alignment`</td>
+<td style="white-space: nowrap;">2025-05-20</td>
+<td style="line-height: 1.6; padding: 10px;">The debate framework, even with a weaker, text-only judge, can effectively supervise and improve the performance of stronger, multimodal models, suggesting a pathway for scalable oversight where human-level understanding isn't always required for evaluation., Focusing the debate on instances of expert disagreement, rather than forcing explicit role-playing, streamlines the process and makes it more efficient, potentially reducing the computational cost of oversight., Finetuning vision-language models based on judgments from weaker LLMs can instill reasoning capabilities, indicating that oversight can be used not only for evaluation but also for improving model alignment and reasoning.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>14</td>
+<td><a href="http://arxiv.org/abs/2507.19486v1">Confirmation bias: A challenge for scalable oversight</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `confirmation bias`, `Human-AI Interaction`, `AI safety`, `Cognitive Bias`</td>
+<td style="white-space: nowrap;">2025-05-17</td>
+<td style="line-height: 1.6; padding: 10px;">Confirmation bias significantly hinders the effectiveness of simple scalable oversight protocols, even when evaluators are aware of the model's potential for errors., Online research, intended to improve evaluation accuracy, can paradoxically increase confidence in incorrect model outputs due to confirmation bias., The success of previous oversight protocols may have been contingent on human evaluators possessing knowledge absent from the models, an advantage that diminishes as models become more capable.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>15</td>
+<td><a href="http://arxiv.org/abs/2505.04075v2">Rethinking LLM Advancement: Compute-Dependent and Independent Paths to Progress</a></td>
+<td style="font-size: 0.9em;">`Algorithmic Innovation`, `compute-independent advancements`, `compute-dependent advancements`, `AI Oversight`, `capability forecasting`</td>
+<td style="white-space: nowrap;">2025-05-07</td>
+<td style="line-height: 1.6; padding: 10px;">Restricting compute alone is insufficient for controlling LLM capabilities, as algorithmic innovations can lead to significant performance gains even in compute-constrained environments., AI oversight strategies must expand beyond hardware restrictions to include monitoring and potentially guiding algorithmic research directions., The proposed framework of compute-dependent vs. compute-independent advancements provides a valuable tool for forecasting AI progress and identifying potential areas of concern.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>16</td>
+<td><a href="http://arxiv.org/abs/2505.00662v1">DeepCritic: Deliberate Critique with Large Language Models</a></td>
+<td style="font-size: 0.9em;">`LLM Critique`, `Automated Oversight`, `reinforcement learning`, `Math Reasoning`, `Error Identification`</td>
+<td style="white-space: nowrap;">2025-05-01</td>
+<td style="line-height: 1.6; padding: 10px;">LLMs can be effectively trained to provide detailed, step-wise critiques of other LLMs' reasoning processes, significantly improving error identification accuracy compared to existing methods., A two-stage training approach, combining supervised fine-tuning with reinforcement learning, is crucial for developing LLM critics capable of in-depth analysis and feedback., The quality of training data, specifically long-form critiques with multi-perspective verifications, is a key factor in the performance of LLM critics.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>17</td>
+<td><a href="http://arxiv.org/abs/2504.18530v2">Scaling Laws For Scalable Oversight</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `AI safety`, `nested oversight`, `capability mismatch`, `scaling laws`</td>
+<td style="white-space: nowrap;">2025-04-25</td>
+<td style="line-height: 1.6; padding: 10px;">The paper introduces a framework for quantifying the probability of successful oversight based on the capabilities of the overseer and the overseen system, modeled as a game with oversight-specific Elo scores., The study identifies scaling laws for different oversight games (Mafia, Debate, Backdoor Code, Wargames), approximating how domain performance depends on general AI system capability, and highlights the limitations of single-layer oversight., The paper analyzes Nested Scalable Oversight (NSO) and identifies conditions for its success, determining the optimal number of oversight levels to maximize the probability of oversight success, though success rates vary significantly across different games and decline when overseeing stronger systems.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>18</td>
+<td><a href="http://arxiv.org/abs/2504.17404v5">Super Co-alignment of Human and AI for Sustainable Symbiotic Society</a></td>
+<td style="font-size: 0.9em;">`superalignment`, `co-alignment`, `scalable oversight`, `AI safety`, `value alignment`, `symbiotic AI`</td>
+<td style="white-space: nowrap;">2025-04-24</td>
+<td style="line-height: 1.6; padding: 10px;">The paper argues that unidirectional imposition of human values on superintelligent AI is insufficient for true alignment, advocating for a 'Super Co-alignment' approach where values are co-shaped by humans and AI., The proposed framework integrates external oversight (human-centered decision making with automated evaluation) and intrinsic proactive alignment (AI understanding of self, others, and society) to achieve continuous alignment., The paper highlights the importance of AI's self-awareness, self-reflection, and empathy in inferring human intentions and prioritizing human well-being, suggesting a move beyond purely behavioral alignment.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>19</td>
+<td><a href="http://arxiv.org/abs/2504.06141v2">Adversarial Training of Reward Models</a></td>
+<td style="font-size: 0.9em;">`reward modeling`, `Adversarial Training`, `robustness`, `reward hacking`, `RLHF`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2025-04-08</td>
+<td style="line-height: 1.6; padding: 10px;">Adversarial training of reward models is crucial for preventing reward hacking and improving the robustness of RLHF systems, directly addressing a key challenge in scalable oversight., The Adv-RM framework provides a practical method for identifying and mitigating vulnerabilities in reward models, enhancing their reliability and alignment with intended goals., By improving the stability and effectiveness of RLHF training, Adv-RM contributes to the development of more trustworthy and controllable AI agents.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>20</td>
+<td><a href="http://arxiv.org/abs/2504.03731v1">A Benchmark for Scalable Oversight Protocols</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `AI Alignment`, `human feedback`, `Benchmarking`, `debate`</td>
+<td style="white-space: nowrap;">2025-03-31</td>
+<td style="line-height: 1.6; padding: 10px;">The paper addresses a critical gap in the field by providing a systematic empirical framework for evaluating scalable oversight protocols, which is essential for ensuring AI alignment as agents become more capable., The introduction of the Agent Score Difference (ASD) metric offers a quantifiable way to measure the effectiveness of oversight mechanisms in promoting truth-telling over deception, enabling more rigorous comparisons., The provided Python package facilitates rapid and competitive evaluation of different protocols, fostering further research and development in scalable oversight.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>21</td>
+<td><a href="http://arxiv.org/abs/2503.22989v1">FindTheFlaws: Annotated Errors for Detecting Flawed Reasoning and Scalable Oversight Research</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `AI safety`, `error detection`, `critique`, `dataset`</td>
+<td style="white-space: nowrap;">2025-03-29</td>
+<td style="line-height: 1.6; padding: 10px;">The FindTheFlaws dataset directly addresses the need for high-quality, annotated data to evaluate and improve scalable oversight techniques like debate, critique, and prover-verifier games., The performance variation of frontier models across different datasets suggests a strategy for building hierarchical oversight systems, where less capable models can verify the solutions of more capable ones in specific domains., The existence of expert baselines that outperform even top models in certain task/dataset combinations highlights the potential for using human experts as 'gold standard' verifiers in scalable oversight frameworks, especially during initial development and fine-tuning.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>22</td>
+<td><a href="http://arxiv.org/abs/2503.13621v1">Superalignment with Dynamic Human Values</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Dynamic Human Values`, `Recursive Reward Modeling`, `Task Decomposition`, `Part-to-Complete Generalization`</td>
+<td style="white-space: nowrap;">2025-03-17</td>
+<td style="line-height: 1.6; padding: 10px;">The paper directly addresses the challenge of scalable oversight by proposing a task decomposition approach, aiming to break down complex tasks into human-understandable and supervisable subtasks., It acknowledges the importance of dynamic human values in AI alignment, a crucial aspect often overlooked in scalable oversight research that tends to focus solely on efficiency., The 'part-to-complete generalization hypothesis' is a key assumption that requires empirical validation. If subtask alignment doesn't generalize to complete task alignment, the entire approach could be flawed, highlighting a critical area for future research and potential failure mode.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>23</td>
+<td><a href="http://arxiv.org/abs/2502.21262v2">Modeling Human Beliefs about AI Behavior for Scalable Oversight</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `belief modeling`, `value learning`, `human feedback`, `AI Alignment`</td>
+<td style="white-space: nowrap;">2025-02-28</td>
+<td style="line-height: 1.6; padding: 10px;">Modeling human beliefs about AI behavior is crucial for reliable value learning, especially when AI systems surpass human capabilities and evaluators may misunderstand the AI's actions., The paper introduces the concept of 'belief model covering' as a relaxation technique to reduce the reliance on precise belief models, which can be difficult to obtain in practice., Leveraging internal representations of adapted foundation models to mimic human evaluators' beliefs offers a promising avenue for learning correct values from potentially flawed human feedback.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>24</td>
+<td><a href="http://arxiv.org/abs/2502.04675v3">Scalable Oversight for Superhuman AI via Recursive Self-Critiquing</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `recursive self-critiquing`, `AI Alignment`, `Human-AI Interaction`, `AI-AI interaction`</td>
+<td style="white-space: nowrap;">2025-02-07</td>
+<td style="line-height: 1.6; padding: 10px;">Recursive self-critiquing offers a potential pathway to scalable oversight by shifting the burden from direct human assessment of complex AI outputs to evaluating critiques of critiques, which may be easier for humans or other AI systems to handle., The paper suggests a hierarchical approach to AI supervision, where higher-order critiques (e.g., critique of critique of critique) can provide more tractable supervision when direct evaluation becomes infeasible due to the AI's superior capabilities., The study explores both Human-AI and AI-AI interaction paradigms, indicating a potential for AI systems to assist in the oversight process, which is crucial for scaling oversight as AI capabilities advance.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>25</td>
+<td><a href="http://arxiv.org/abs/2502.04313v2">Great Models Think Alike and this Undermines AI Oversight</a></td>
+<td style="font-size: 0.9em;">`AI Oversight`, `Model Similarity`, `Weak-to-Strong Generalization`, `Correlated Failures`, `Language Model Evaluation`</td>
+<td style="white-space: nowrap;">2025-02-06</td>
+<td style="line-height: 1.6; padding: 10px;">LLM-as-a-judge systems exhibit self-preference, favoring models similar to themselves, which can bias evaluation and oversight., Gains from weak-to-strong generalization in AI oversight are heavily influenced by the complementary knowledge between the weak supervisor and the strong student model. As models become more capable, finding such complementary knowledge becomes harder., Increasing model capabilities correlate with increased similarity in model mistakes, raising concerns about correlated failures in AI oversight systems.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>26</td>
+<td><a href="http://arxiv.org/abs/2501.17899v2">The Right to AI</a></td>
+<td style="font-size: 0.9em;">`Participatory AI`, `AI Governance`, `scalable oversight`, `Human-Centered AI`, `AI Alignment`</td>
+<td style="white-space: nowrap;">2025-01-29</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the importance of community involvement in AI development and governance, which is crucial for scalable oversight. By incorporating diverse perspectives, we can potentially mitigate biases and improve the social responsiveness of AI systems, making them more aligned with human values., The concept of 'data as socially produced' and the call for collective data ownership have significant implications for AI alignment. If data reflects societal biases, AI trained on that data will inherit those biases. Participatory data management could lead to fairer and more representative datasets, ultimately improving AI safety and alignment., The proposed four-tier model for the Right to AI, inspired by Arnstein's Ladder of Citizen Participation, provides a framework for progressively increasing stakeholder involvement in AI oversight. This framework can be adapted and scaled to different contexts, offering a practical approach to ensuring that AI systems are accountable and aligned with societal needs.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>27</td>
+<td><a href="http://arxiv.org/abs/2501.13124v1">Debate Helps Weak-to-Strong Generalization</a></td>
+<td style="font-size: 0.9em;">`Weak-to-Strong Generalization`, `scalable oversight`, `debate`, `AI Alignment`, `Human Supervision`</td>
+<td style="white-space: nowrap;">2025-01-21</td>
+<td style="line-height: 1.6; padding: 10px;">Debate can be a valuable mechanism for a weak model to extract reliable information from a stronger, potentially untrustworthy model, improving the weak model's performance., Ensembling weak models trained on debate transcripts from strong models can lead to more robust supervision signals for aligning the strong model., Combining weak-to-strong generalization with debate-based supervision shows promise for improving AI alignment, particularly in scenarios where human supervision is limited.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>28</td>
+<td><a href="http://arxiv.org/abs/2501.05790v3">Understanding Impact of Human Feedback via Influence Functions</a></td>
+<td style="font-size: 0.9em;">`RLHF`, `Influence Functions`, `reward modeling`, `human feedback`, `Bias Detection`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2025-01-10</td>
+<td style="line-height: 1.6; padding: 10px;">Influence functions offer a promising method for understanding and mitigating the impact of noisy, inconsistent, or biased human feedback in RLHF, which is crucial for aligning LLMs with human intentions., The paper introduces a compute-efficient approximation of influence functions suitable for large-scale preference datasets and LLM-based reward models, making it practically applicable., The application of influence functions can aid in detecting labeler biases and guiding labelers to refine their strategies, leading to more accurate and consistent feedback, thereby improving the quality of reward models.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>29</td>
+<td><a href="http://arxiv.org/abs/2412.16468v3">The Road to Artificial SuperIntelligence: A Comprehensive Survey of Superalignment</a></td>
+<td style="font-size: 0.9em;">`superalignment`, `scalable oversight`, `ASI`, `AI safety`, `alignment paradigms`</td>
+<td style="white-space: nowrap;">2024-12-21</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the limitations of current alignment techniques when applied to Artificial Superintelligence (ASI), emphasizing the need for novel approaches that can scale to superhuman capabilities., It identifies scalable oversight as a crucial component of superalignment, focusing on methods to provide high-quality guidance signals for advanced AI systems., The survey format allows for a comprehensive overview of existing methods, their strengths, and weaknesses, providing a valuable resource for researchers in the field.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>30</td>
+<td><a href="http://arxiv.org/abs/2412.11145v2">The Superalignment of Superhuman Intelligence with Large Language Models</a></td>
+<td style="font-size: 0.9em;">`superalignment`, `scalable oversight`, `Weak-to-Strong Generalization`, `Adversarial Training`, `AI safety`</td>
+<td style="white-space: nowrap;">2024-12-15</td>
+<td style="line-height: 1.6; padding: 10px;">The paper explicitly addresses the problem of aligning superhuman AI, particularly LLMs, with human values, which is a core concern in scalable oversight research., It highlights the challenges of scalable oversight when human experts are unable to reliably provide feedback due to the complexity of the task or the model's superior capabilities., The proposed attacker-learner-critic framework provides a concrete structure for developing and testing superalignment algorithms, emphasizing the importance of adversarial robustness and self-improvement.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>31</td>
+<td><a href="http://arxiv.org/abs/2412.09572v2">Rethinking LLM Uncertainty: A Multi-Agent Approach to Estimating Black-Box Model Uncertainty</a></td>
+<td style="font-size: 0.9em;">`uncertainty estimation`, `LLM`, `scalable oversight`, `hallucination detection`, `multi-agent systems`</td>
+<td style="white-space: nowrap;">2024-12-12</td>
+<td style="line-height: 1.6; padding: 10px;">Existing self-consistency methods for uncertainty estimation in LLMs can be misleading due to contextual biases affecting knowledge retrieval., A multi-agent approach, leveraging diverse query variations, provides a more accurate assessment of LLM uncertainty and improves hallucination detection., The proposed method, DiverseAgentEntropy, offers a theoretically grounded approach to quantifying uncertainty in black-box LLMs, which is crucial for reliable responses and scalable oversight.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>32</td>
+<td><a href="http://arxiv.org/abs/2412.06559v4">ProcessBench: Identifying Process Errors in Mathematical Reasoning</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `error detection`, `mathematical reasoning`, `process reward models`, `critic models`</td>
+<td style="white-space: nowrap;">2024-12-09</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the limitations of existing process reward models (PRMs) in generalizing to more complex mathematical reasoning problems, indicating a need for more robust and generalizable oversight mechanisms., The study demonstrates the potential of using prompted general language models (critic models) for error detection, offering a promising avenue for scalable oversight by leveraging readily available and adaptable models., The ProcessBench dataset provides a valuable resource for benchmarking and improving AI systems' ability to identify errors in reasoning processes, which is crucial for ensuring the reliability and safety of AI agents.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>33</td>
+<td><a href="http://arxiv.org/abs/2410.13215v2">Balancing Label Quantity and Quality for Scalable Elicitation</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `label quality`, `label quantity`, `pretrained models`, `sample efficiency`, `elicitation`, `cost-benefit analysis`</td>
+<td style="white-space: nowrap;">2024-10-17</td>
+<td style="line-height: 1.6; padding: 10px;">There exists a quantity-quality tradeoff in labeling data for training AI models, particularly when using pretrained models. Understanding this tradeoff is crucial for scalable oversight, as it impacts the cost-effectiveness of different oversight strategies., Pretrained models possess latent capabilities that can be leveraged to reduce the need for high-quality labels. Elicitation techniques, such as few-shot prompting, can tap into this existing knowledge, improving accuracy at a fixed labeling budget., Different regimes (quantity-dominant, quality-dominant, mixed) exist for eliciting knowledge from pretrained models. The optimal strategy depends on the specific task, the model's pre-existing knowledge, and the cost of obtaining labels of varying quality. Identifying these regimes is important for efficient oversight.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>34</td>
+<td><a href="http://arxiv.org/abs/2410.04332v2">Gradient Routing: Masking Gradients to Localize Computation in Neural Networks</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Modular Neural Networks`, `Interpretability`, `Unlearning`, `Reinforcement Learning Alignment`</td>
+<td style="white-space: nowrap;">2024-10-06</td>
+<td style="line-height: 1.6; padding: 10px;">Gradient routing offers a method to enforce modularity in neural networks, allowing for more targeted interventions and oversight. This is crucial for scalable oversight as it allows focusing on specific modules responsible for undesirable behaviors., The ability to robustly unlearn specific capabilities by ablating pre-specified network subregions is a significant step towards AI safety. This allows for removing harmful capabilities without retraining the entire network, which is essential for responding to unforeseen risks., The paper demonstrates the potential for scalable oversight in reinforcement learning by localizing modules responsible for different behaviors. This could enable more efficient monitoring and intervention in complex RL agents.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>35</td>
+<td><a href="http://arxiv.org/abs/2410.00258v3">Possible Principles for Aligned Structure Learning Agents</a></td>
+<td style="font-size: 0.9em;">`scalable alignment`, `Structure Learning`, `Causal Representation Learning`, `Theory of Mind`, `preference learning`</td>
+<td style="white-space: nowrap;">2024-09-30</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the importance of structure learning (causal representation learning) as a foundation for scalable alignment. Agents that can accurately model the world, including other agents' preferences and beliefs (Theory of Mind), are more likely to be aligned., The paper suggests that incorporating 'core knowledge' and model reduction techniques can improve the efficiency and accuracy of structure learning, making it more scalable for complex environments., The paper explores formalizing alignment principles, such as Asimov's Laws, within a structure learning framework. This provides a potential pathway for embedding ethical constraints directly into the agent's world model.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>36</td>
+<td><a href="http://arxiv.org/abs/2409.16636v1">Training Language Models to Win Debates with Self-Play Improves Judge Accuracy</a></td>
+<td style="font-size: 0.9em;">`debate`, `scalable oversight`, `Language Models`, `self-play`, `judge accuracy`</td>
+<td style="white-space: nowrap;">2024-09-25</td>
+<td style="line-height: 1.6; padding: 10px;">Training language models to win debates through self-play can improve the accuracy of language model-based judges in evaluating complex tasks, suggesting a potential path for scalable oversight., Debate training appears to encourage the development of stronger and more informative arguments compared to consultancy-based approaches, indicating that debate may be a more effective method for eliciting useful information from AI systems., The study highlights the potential of using adversarial training (debate) to improve the reliability of AI evaluators, which is crucial for ensuring the safety and alignment of increasingly capable AI agents.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>37</td>
+<td><a href="http://arxiv.org/abs/2409.07335v1">Explanation, Debate, Align: A Weak-to-Strong Framework for Language Model Generalization</a></td>
+<td style="font-size: 0.9em;">`Weak-to-Strong Generalization`, `model alignment`, `Explanation Generation`, `multi-agent systems`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2024-09-11</td>
+<td style="line-height: 1.6; padding: 10px;">Weak-to-strong generalization offers a pathway for transferring alignment properties from advanced, potentially more aligned, models to weaker ones, reducing the need for extensive, potentially biased, training data for each individual model., Explanation generation, when integrated into a weak-to-strong framework, can provide insights into the alignment status of both the strong and weak models, enabling a better understanding of how alignment is transferred and where potential misalignments might arise., The facilitation function concept provides a structured way to formalize and analyze the transfer of capabilities, including alignment, between models, which is crucial for developing scalable oversight mechanisms.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>38</td>
+<td><a href="http://arxiv.org/abs/2407.21009v4">AI-Assisted Generation of Difficult Math Questions</a></td>
+<td style="font-size: 0.9em;">`LLM`, `Question Generation`, `Difficulty`, `Metacognition`, `human-in-the-loop`, `Out-of-Distribution`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2024-07-30</td>
+<td style="line-height: 1.6; padding: 10px;">The paper demonstrates a method for generating 'out-of-distribution' (OOD) examples that are difficult for both LLMs and humans. This is valuable for scalable oversight because OOD examples can expose weaknesses and vulnerabilities in AI systems that might not be apparent from standard training data., The human-in-the-loop approach, where LLMs generate and refine questions, and humans verify and further refine them, offers a potential framework for scalable oversight. LLMs can automate the generation of test cases, while humans provide crucial validation and refinement, ensuring quality and relevance., The observed relationship between model performance on the original dataset and the new, more difficult dataset (MATH$^2$) suggests a way to quantify the 'difficulty' of a task and potentially identify areas where models struggle with combining different skills. This could inform targeted interventions to improve model robustness and generalization.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>39</td>
+<td><a href="http://arxiv.org/abs/2407.04693v2">ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models</a></td>
+<td style="font-size: 0.9em;">`hallucination detection`, `scalable oversight`, `self-training`, `expectation maximization`, `LLM Evaluation`</td>
+<td style="white-space: nowrap;">2024-07-05</td>
+<td style="line-height: 1.6; padding: 10px;">The paper introduces a scalable approach to detect and mitigate hallucinations in LLMs, a critical aspect of ensuring AI safety and reliability. By automating the annotation process, it addresses the bottleneck of manual annotation, enabling the creation of larger and more diverse datasets for training hallucination detectors., The self-training framework, based on the Expectation Maximization (EM) algorithm, demonstrates a promising method for iteratively improving both the annotation dataset and the hallucination annotator. This approach can be adapted to other areas of AI safety where labeled data is scarce or expensive to obtain., The finding that a relatively small (7B parameter) model can outperform GPT-4 in hallucination detection suggests that specialized models trained on high-quality, iteratively refined datasets can be more effective than general-purpose LLMs for specific oversight tasks.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>40</td>
+<td><a href="http://arxiv.org/abs/2407.04622v2">On scalable oversight with weak LLMs judging strong LLMs</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `debate`, `Language Models`, `AI Alignment`, `Weak-to-Strong Generalization`</td>
+<td style="white-space: nowrap;">2024-07-05</td>
+<td style="line-height: 1.6; padding: 10px;">Debate, where two AI agents argue to convince a weaker AI judge, consistently outperforms consultancy (single AI trying to convince a judge) when the consultant is randomly assigned to argue for a specific answer, suggesting debate is a more robust oversight mechanism., The effectiveness of debate compared to direct question answering depends on the task. Debate excels in tasks with information asymmetry (e.g., extractive QA), but its advantage is less clear in tasks without such asymmetry (e.g., mathematics, coding, logic)., Allowing debaters to choose which answer to argue for (rather than being assigned one) improves judge accuracy, indicating that strategic agent behavior can be harnessed to improve oversight.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>41</td>
+<td><a href="http://arxiv.org/abs/2403.09472v2">Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `reward modeling`, `Easy-to-Hard Generalization`, `AI Alignment`, `reasoning`</td>
+<td style="white-space: nowrap;">2024-03-14</td>
+<td style="line-height: 1.6; padding: 10px;">Training reward models on easier tasks can enable effective evaluation and improvement of AI agents on harder tasks, even surpassing human-level performance on those harder tasks., Process supervision (i.e., supervising the reasoning steps) during reward model training on easier tasks is crucial for effective generalization to harder tasks., Easy-to-hard generalization can be achieved through re-ranking or reinforcement learning, using the reward model trained on easier tasks to guide the agent's learning on harder tasks.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>42</td>
+<td><a href="http://arxiv.org/abs/2403.04204v1">On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models</a></td>
+<td style="font-size: 0.9em;">`Alignment`, `big models`, `scalable oversight`, `RLHF`, `SFT`</td>
+<td style="white-space: nowrap;">2024-03-07</td>
+<td style="line-height: 1.6; padding: 10px;">The paper highlights the inherent challenges in aligning large models, including data costs and scalable oversight, emphasizing that finding the optimal alignment strategy remains an open problem., The survey categorizes alignment methods into Reinforcement Learning, Supervised Fine-Tuning, and In-context Learning, providing a structured overview of their strengths and limitations, which is crucial for understanding the trade-offs in different oversight approaches., The discussion of emerging topics like personal and multimodal alignment suggests future research directions that could impact how we tailor oversight mechanisms to specific users and diverse data modalities.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>43</td>
+<td><a href="http://arxiv.org/abs/2402.13764v5">CriticEval: Evaluating Large Language Model as Critic</a></td>
+<td style="font-size: 0.9em;">`LLM Evaluation`, `critique ability`, `scalable oversight`, `AI safety`, `benchmark`</td>
+<td style="white-space: nowrap;">2024-02-21</td>
+<td style="line-height: 1.6; padding: 10px;">The paper introduces a benchmark (CriticEval) specifically designed to evaluate the critique ability of LLMs, which is a critical component for scalable oversight as it allows LLMs to identify and correct their own flaws or the flaws of other AI systems., The benchmark evaluates critique ability across multiple dimensions and task scenarios, providing a more comprehensive assessment than existing methods. This is important because different tasks and types of errors may require different critique strategies., The use of GPT-4 to evaluate textual critiques, leveraging a large number of reference annotations, enhances the reliability of the evaluation process. This is crucial for ensuring that the benchmark accurately reflects the true critique capabilities of LLMs.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>44</td>
+<td><a href="http://arxiv.org/abs/2402.00667v1">Improving Weak-to-Strong Generalization with Scalable Oversight and Ensemble Learning</a></td>
+<td style="font-size: 0.9em;">`Weak-to-Strong Generalization`, `scalable oversight`, `Ensemble Learning`, `Human-AI Interaction`, `AI Alignment`</td>
+<td style="white-space: nowrap;">2024-02-01</td>
+<td style="line-height: 1.6; padding: 10px;">The paper directly addresses the challenge of aligning increasingly capable AI systems with human values through the Weak-to-Strong Generalization (W2SG) framework, which is a core concern in scalable oversight., The use of ensemble learning to improve the quality of weak supervision is a promising approach for reducing the capability gap between weak teachers (e.g., human supervisors or automated evaluators) and strong student models, making oversight more effective., Exploring human-AI interaction and AI-AI debate as scalable oversight mechanisms offers practical avenues for improving the reliability and scalability of supervision signals.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>45</td>
+<td><a href="http://arxiv.org/abs/2401.07181v1">Reinforcement Learning from LLM Feedback to Counteract Goal Misgeneralization</a></td>
+<td style="font-size: 0.9em;">`goal misgeneralization`, `LLM feedback`, `reinforcement learning`, `scalable oversight`, `reward shaping`</td>
+<td style="white-space: nowrap;">2024-01-14</td>
+<td style="line-height: 1.6; padding: 10px;">LLMs can provide effective, scalable oversight for RL agents, even without task proficiency, by identifying potential goal misgeneralization scenarios., Using LLM feedback to shape the reward function can significantly improve an RL agent's ability to generalize to the intended goal, especially when the true and proxy goals are distinguishable., The method is particularly effective in mitigating behavioral biases that lead to goal misgeneralization.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>46</td>
+<td><a href="http://arxiv.org/abs/2401.06751v2">The Unreasonable Effectiveness of Easy Training Data for Hard Tasks</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Easy-to-Hard Generalization`, `Language Models`, `Data Efficiency`, `Weak Supervision`</td>
+<td style="white-space: nowrap;">2024-01-12</td>
+<td style="line-height: 1.6; padding: 10px;">Language models exhibit surprisingly strong generalization from easy to hard data, potentially reducing the need for expensive and noisy hard-labeled data in some contexts., Collecting and utilizing easy data for finetuning can be more effective than focusing solely on hard data, especially when considering the cost and reliability of labeling., The effectiveness of easy-to-hard generalization varies depending on the task and the specific measure of data hardness used.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>47</td>
+<td><a href="http://arxiv.org/abs/2311.12022v1">GPQA: A Graduate-Level Google-Proof Q&A Benchmark</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `AI Alignment`, `benchmark`, `Question Answering`, `expert knowledge`</td>
+<td style="white-space: nowrap;">2023-11-20</td>
+<td style="line-height: 1.6; padding: 10px;">GPQA provides a challenging benchmark for evaluating scalable oversight methods, as it requires AI systems to answer questions that are difficult even for skilled humans with access to external information., The dataset's difficulty highlights the need for oversight techniques that can effectively supervise AI systems that surpass human capabilities, particularly in domains requiring expert knowledge., The performance gap between experts and non-experts on GPQA suggests that effective oversight may require supervisors with domain-specific knowledge or methods to augment non-expert understanding.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>48</td>
+<td><a href="http://arxiv.org/abs/2311.07954v2">A Closer Look at the Self-Verification Abilities of Large Language Models in Logical Reasoning</a></td>
+<td style="font-size: 0.9em;">`self-verification`, `logical reasoning`, `fallacy detection`, `LLMs`, `scalable oversight`</td>
+<td style="white-space: nowrap;">2023-11-14</td>
+<td style="line-height: 1.6; padding: 10px;">LLMs struggle to accurately identify logical fallacies in their own reasoning, suggesting limitations in their self-verification abilities., The inability to reliably detect fallacies undermines the effectiveness of self-verification methods for improving reasoning performance., The FALLACIES dataset provides a valuable resource for evaluating and improving the self-verification capabilities of LLMs in logical reasoning contexts.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>49</td>
+<td><a href="http://arxiv.org/abs/2310.05910v2">SALMON: Self-Alignment with Instructable Reward Models</a></td>
+<td style="font-size: 0.9em;">`reward modeling`, `scalable alignment`, `Principle-Based Alignment`, `LLM Alignment`, `Synthetic Data`</td>
+<td style="white-space: nowrap;">2023-10-09</td>
+<td style="line-height: 1.6; padding: 10px;">SALMON offers a pathway to reduce reliance on extensive human feedback by using an instructable reward model trained on synthetic preference data derived from human-defined principles. This is crucial for scaling oversight to complex tasks where obtaining consistent human annotations is difficult., The controllability afforded by adjusting principles during RL training allows for dynamic adaptation of the AI agent's behavior, potentially enabling more flexible and targeted safety interventions., The method's strong performance with minimal human supervision (6 exemplars, 31 principles) suggests a significant improvement in sample efficiency, making alignment more practical for resource-constrained settings.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>50</td>
+<td><a href="http://arxiv.org/abs/2310.02932v2">Assessing Large Language Models on Climate Information</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `LLM Evaluation`, `Climate Change Communication`, `Epistemological Adequacy`, `AI Assistance`</td>
+<td style="white-space: nowrap;">2023-10-04</td>
+<td style="line-height: 1.6; padding: 10px;">LLMs exhibit a significant gap between surface-level fluency and epistemological accuracy when communicating about climate change, highlighting the need for careful oversight to ensure factual correctness and avoid misinformation., The paper introduces a novel protocol for scalable oversight that leverages AI assistance and human raters with relevant education, providing a practical approach to evaluating LLM performance in specialized domains., The evaluation framework, grounded in science communication research, offers a comprehensive and fine-grained analysis of LLM responses, considering both presentational and epistemological dimensions, which is crucial for identifying subtle biases and inaccuracies.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>51</td>
+<td><a href="http://arxiv.org/abs/2304.11218v1">Explainability in AI Policies: A Critical Review of Communications, Reports, Regulations, and Standards in the EU, US, and UK</a></td>
+<td style="font-size: 0.9em;">`explainability`, `AI policy`, `regulation`, `AI Oversight`, `transparency`</td>
+<td style="white-space: nowrap;">2023-04-20</td>
+<td style="line-height: 1.6; padding: 10px;">Current AI policies regarding explainability are often based on coarse notions and requirements, potentially hindering practical adoption and effective oversight., A lack of consensus on what constitutes a valid algorithmic explanation and the feasibility of its implementation across stakeholders poses a significant challenge to effective AI oversight., Policies primarily frame explainability as a risk management tool, potentially overlooking other crucial aspects like user understanding and trust.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>52</td>
+<td><a href="http://arxiv.org/abs/2211.10024v3">Diagnostics for Deep Neural Networks with Automated Copy/Paste Attacks</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Adversarial Attacks`, `Interpretability`, `Red Teaming`, `automated diagnostics`</td>
+<td style="white-space: nowrap;">2022-11-18</td>
+<td style="line-height: 1.6; padding: 10px;">Automated methods like SNAFUE can significantly enhance scalable oversight by efficiently identifying vulnerabilities in DNNs that might be missed by human reviewers or traditional adversarial example techniques., The use of interpretable adversarial attacks, specifically copy/paste attacks, facilitates human understanding of DNN weaknesses, making it easier to diagnose and address underlying issues., Red teaming with automated copy/paste attacks can reveal a large number of easily-describable vulnerabilities, highlighting the potential for these attacks to serve as a practical diagnostic tool for AI safety.</td>
+</tr>
+<tr style="vertical-align: top;">
+<td>53</td>
+<td><a href="http://arxiv.org/abs/2211.03540v2">Measuring Progress on Scalable Oversight for Large Language Models</a></td>
+<td style="font-size: 0.9em;">`scalable oversight`, `Language Models`, `Human-AI Collaboration`, `Alignment`, `empirical evaluation`</td>
+<td style="white-space: nowrap;">2022-11-04</td>
+<td style="line-height: 1.6; padding: 10px;">Human-AI collaboration, even with an unreliable AI assistant, can significantly outperform both unaided humans and the AI model alone on complex tasks., The paper provides a concrete experimental design for studying scalable oversight with current language models by focusing on tasks where human specialists excel but unaided humans and current AI fail., The study demonstrates the viability of using chat-based interaction with language models as a baseline strategy for scalable oversight, suggesting that even simple oversight mechanisms can yield substantial improvements.</td>
+</tr>
+</tbody>
+</table>
 </div>
