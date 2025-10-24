@@ -46,38 +46,9 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        # Extract tags (multi-select) with shields.io badges
+        # Extract tags as plain text
         tags_data = props.get("Tags", {}).get("multi_select", [])
-        tags_html = ""
-        if tags_data:
-            tag_badges = []
-            for tag in tags_data:
-                tag_name = tag["name"]
-                tag_color = tag.get("color", "default")
-                # Map Notion colors to shields.io colors
-                color_map = {
-                    "default": "lightgrey",
-                    "gray": "grey",
-                    "brown": "8B4513",
-                    "orange": "orange",
-                    "yellow": "yellow",
-                    "green": "brightgreen",
-                    "blue": "blue",
-                    "purple": "purple",
-                    "pink": "ff69b4",
-                    "red": "red"
-                }
-                badge_color = color_map.get(tag_color, "lightgrey")
-                # URL encode the tag name and replace spaces with underscores
-                tag_encoded = tag_name.replace(" ", "_").replace("-", "--")
-                # Use correct shields.io format: /badge/<LABEL>-<MESSAGE>-<COLOR>
-                tag_badges.append(
-                    f'<img src="https://img.shields.io/badge/{tag_encoded}-{badge_color}?style=for-the-badge" alt="{tag_name}" height="24">'
-                )
-            tags_html = "<br>".join(tag_badges)
-        else:
-            tags_html = "-"
-        
+        tags_text = ", ".join([tag["name"] for tag in tags_data]) if tags_data else "-"
         tags_list = [t["name"] for t in tags_data]
 
         # Filtering logic
@@ -85,7 +56,7 @@ def generate_markdown_table(papers):
         if not keep_paper:
             continue
 
-        # Keep full insights, just clean up formatting
+        # Clean up key insights
         key_insights = key_insights.replace("\n", " ").strip()
 
         filtered_papers.append({
@@ -93,7 +64,7 @@ def generate_markdown_table(papers):
             "pub_date": pub_date,
             "arxiv_url": arxiv_url,
             "key_insights": key_insights,
-            "tags_html": tags_html,
+            "tags_text": tags_text,
         })
 
     # Sort by Published Date descending
@@ -123,7 +94,7 @@ def generate_markdown_table(papers):
         md += '<tr style="vertical-align: top; height: auto;">\n'
         md += f'<td style="padding: 8px;">{idx}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="{paper["arxiv_url"]}">{paper["title"]}</a></td>\n'
-        md += f'<td style="padding: 8px;">{paper["tags_html"]}</td>\n'
+        md += f'<td style="padding: 8px;">{paper["tags_text"]}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap;">{date_display}</td>\n'
         md += f'<td style="padding: 8px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{paper["key_insights"]}</td>\n'
         md += '</tr>\n'
