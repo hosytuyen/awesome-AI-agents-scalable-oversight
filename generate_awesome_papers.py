@@ -46,7 +46,7 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        # Extract tags (multi-select) with colors
+        # Extract tags (multi-select) with shields.io badges
         tags_data = props.get("Tags", {}).get("multi_select", [])
         tags_html = ""
         if tags_data:
@@ -54,24 +54,24 @@ def generate_markdown_table(papers):
             for tag in tags_data:
                 tag_name = tag["name"]
                 tag_color = tag.get("color", "default")
-                # Map Notion colors to CSS colors
+                # Map Notion colors to shields.io colors
                 color_map = {
-                    "default": "#e0e0e0",
-                    "gray": "#9b9a97",
-                    "brown": "#937264",
-                    "orange": "#d9730d",
-                    "yellow": "#dfab01",
-                    "green": "#0f7b6c",
-                    "blue": "#0b6e99",
-                    "purple": "#6940a5",
-                    "pink": "#ad1a72",
-                    "red": "#e03e3e"
+                    "default": "lightgrey",
+                    "gray": "grey",
+                    "brown": "brown",
+                    "orange": "orange",
+                    "yellow": "yellow",
+                    "green": "green",
+                    "blue": "blue",
+                    "purple": "purple",
+                    "pink": "ff69b4",
+                    "red": "red"
                 }
-                bg_color = color_map.get(tag_color, "#e0e0e0")
+                badge_color = color_map.get(tag_color, "lightgrey")
+                # URL encode the tag name
+                tag_encoded = tag_name.replace(" ", "%20")
                 tag_badges.append(
-                    f'<span style="display: inline-block; background-color: {bg_color}; color: white; '
-                    f'padding: 2px 8px; border-radius: 12px; font-size: 0.75em; margin: 2px; '
-                    f'white-space: nowrap;">{tag_name}</span>'
+                    f'<img src="https://img.shields.io/badge/{tag_encoded}-{badge_color}?style=flat-square" alt="{tag_name}">'
                 )
             tags_html = " ".join(tag_badges)
         else:
