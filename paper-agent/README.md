@@ -4,7 +4,7 @@ An automated agent that monitors arXiv for papers on specified topics, summarize
 
 If you find this useful, give me a star ⭐ Thank you!!!
 
-## 🚀 Features
+## Features
 
 - **Automated Monitoring**: Discover new arXiv papers on your topics daily.
 - **LLM Summarization**: Generate summaries, tags, and insights (e.g., with Google Gemini).
@@ -13,7 +13,7 @@ If you find this useful, give me a star ⭐ Thank you!!!
 - **Logging & Error Handling**: Detailed logs with rotation and robust error recovery.
 
 
-## 📋 Quick Start
+## Quick Start
 
 ### 1. Enviroment Setup
 ```bash
@@ -53,7 +53,7 @@ LOG_LEVEL=INFO
 ```
 
 
-## 📊 Usage
+## Usage
 
 ### Paper Check (For one-time comprehensive check)
 ```bash
@@ -66,5 +66,6 @@ python main.py --mode manual --days 365
 # Start daily monitoring at 9 AM
 python main.py --mode scheduled
 ```
+
 
 
