@@ -69,15 +69,15 @@ def generate_markdown_table(papers):
     # Sort by Published Date descending
     filtered_papers.sort(key=lambda x: parse_date(x["pub_date"]), reverse=True)
 
-    # === Generate Compact HTML Table ===
-    md += '<div style="overflow-x: auto;">\n'
-    md += '<table>\n'
+    # === Generate Compact HTML Table with Horizontal Scroll ===
+    md += '<div style="overflow-x: auto; max-width: 100%;">\n'
+    md += '<table style="border-collapse: collapse; min-width: 1200px;">\n'
     md += '<thead>\n<tr>\n'
-    md += '<th style="min-width: 30px;">#</th>\n'
-    md += '<th style="min-width: 200px;">🧠 Title</th>\n'
-    md += '<th style="min-width: 100px;">🏷️ Tags</th>\n'
-    md += '<th style="min-width: 100px;">📅 Date</th>\n'
-    md += '<th style="min-width: 300px; max-width: 800px;">💡 Key Insights</th>\n'
+    md += '<th style="min-width: 30px; padding: 8px;">#</th>\n'
+    md += '<th style="min-width: 250px; padding: 8px;">🧠 Title</th>\n'
+    md += '<th style="min-width: 150px; padding: 8px;">🏷️ Tags</th>\n'
+    md += '<th style="min-width: 90px; padding: 8px;">📅 Date</th>\n'
+    md += '<th style="min-width: 600px; padding: 8px;">💡 Key Insights</th>\n'
     md += '</tr>\n</thead>\n<tbody>\n'
 
     for idx, paper in enumerate(filtered_papers, 1):
@@ -90,12 +90,12 @@ def generate_markdown_table(papers):
             except:
                 pass
         
-        md += '<tr style="vertical-align: top;">\n'
-        md += f'<td>{idx}</td>\n'
-        md += f'<td><a href="{paper["arxiv_url"]}">{paper["title"]}</a></td>\n'
-        md += f'<td style="font-size: 0.9em;">{paper["tags_md"]}</td>\n'
-        md += f'<td style="white-space: nowrap;">{date_display}</td>\n'
-        md += f'<td style="line-height: 1.6; padding: 10px;">{paper["key_insights"]}</td>\n'
+        md += '<tr style="vertical-align: top; height: 60px;">\n'
+        md += f'<td style="padding: 8px;">{idx}</td>\n'
+        md += f'<td style="padding: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="{paper["arxiv_url"]}">{paper["title"]}</a></td>\n'
+        md += f'<td style="padding: 8px; font-size: 0.85em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{paper["tags_md"]}</td>\n'
+        md += f'<td style="padding: 8px; white-space: nowrap;">{date_display}</td>\n'
+        md += f'<td style="padding: 8px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{paper["key_insights"]}</td>\n'
         md += '</tr>\n'
 
     md += '</tbody>\n</table>\n</div>\n'
