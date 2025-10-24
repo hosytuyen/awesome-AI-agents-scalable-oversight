@@ -30,13 +30,33 @@ def parse_date(date_str):
 def generate_markdown_table(papers):
     md = "# 🧠 Awesome Papers on Scalable Oversight\n\n"
     md += "A curated collection of research papers on **Scalable Oversight**\n\n"
-    md += "Automatically updated database from arXiv to minitor the latest developments in the field.\n\n"
+    md += "Automatically updated database from arXiv to monitor the latest developments in the field.\n\n"
     md += "*If you want to create a similar automated curated collection on your own topics, check out our simple tool in the `paper-agent` folder! If you find this useful, give me a star ⭐ Thank you!!!*"
     md += "\n\n"
-    # Wrap table in <small> for smaller font
-    md += "<small>\n\n"
-    md += "| # | 🧠 Title | 📅 Published Date | 🔗 arXiv URL | 💡 Key Insights |\n"
-    md += "|---|-----------|------------------|--------------|----------------|\n"
+
+    md += """
+<small>
+<table>
+<colgroup>
+<col style="width: 3%;">
+<col style="width: 25%;">
+<col style="width: 15%;">
+<col style="width: 12%;">
+<col style="width: 10%;">
+<col style="width: 35%;">
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>🧠 Title</th>
+<th>🏷️ Tags</th>
+<th>📅 Published Date</th>
+<th>🔗 Link</th>
+<th>💡 Key Insights</th>
+</tr>
+</thead>
+<tbody>
+"""
 
     filtered_papers = []
     for paper in papers:
@@ -48,37 +68,40 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        # print(arxiv_url)
+        tags_list = [t["name"] for t in props.get("Tags", {}).get("multi_select", [])]
+        tags_md = ", ".join(f"<code>{tag}</code>" for tag in tags_list) if tags_list else "-"
 
-
-        # Extract tags (multi-select)
-        tags_list = [t["name"].lower() for t in props.get("Tags", {}).get("multi_select", [])]
-
-        # Filtering logic
-        keep_paper = ("scalable oversight" in tags_list) or (relevance > 7)
+        keep_paper = ("scalable oversight" in [t.lower() for t in tags_list]) or (relevance > 7)
         if not keep_paper:
             continue
 
         filtered_papers.append({
             "title": title,
-            "pub_date": pub_date,
+            "pub_date": pub_date or "N/A",
             "arxiv_url": arxiv_url,
             "key_insights": key_insights.replace("\n", " ").strip(),
+            "tags_md": tags_md,
         })
 
-    # Sort by Published Date descending
     filtered_papers.sort(key=lambda x: parse_date(x["pub_date"]), reverse=True)
 
-    # Generate table with index
     for idx, paper in enumerate(filtered_papers, 1):
-        title = paper["title"]
-        pub_date = paper["pub_date"] or "N/A"
-        arxiv_url = paper["arxiv_url"]
-        key_insights = paper["key_insights"]
+        md += f"""
+<tr>
+<td>{idx}</td>
+<td><a href="{paper['arxiv_url']}">{paper['title']}</a></td>
+<td>{paper['tags_md']}</td>
+<td>{paper['pub_date']}</td>
+<td><a href="{paper['arxiv_url']}">Link</a></td>
+<td>{paper['key_insights']}</td>
+</tr>
+"""
 
-        md += f"| {idx} | [{title}]({arxiv_url}) | {pub_date} | [Link]({arxiv_url}) | {key_insights} |\n"
-
-    md += "\n</small>"
+    md += """
+</tbody>
+</table>
+</small>
+"""
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
