@@ -46,9 +46,38 @@ def generate_markdown_table(papers):
         key_insights = extract_text(props.get("Key Insights", {}).get("rich_text", []))
         relevance = props.get("Relevance Score", {}).get("number", 0)
 
-        # Extract tags (multi-select)
-        tags_list = [t["name"] for t in props.get("Tags", {}).get("multi_select", [])]
-        tags_md = ", ".join(f"`{tag}`" for tag in tags_list) if tags_list else "-"
+        # Extract tags (multi-select) with colors
+        tags_data = props.get("Tags", {}).get("multi_select", [])
+        tags_html = ""
+        if tags_data:
+            tag_badges = []
+            for tag in tags_data:
+                tag_name = tag["name"]
+                tag_color = tag.get("color", "default")
+                # Map Notion colors to CSS colors
+                color_map = {
+                    "default": "#e0e0e0",
+                    "gray": "#9b9a97",
+                    "brown": "#937264",
+                    "orange": "#d9730d",
+                    "yellow": "#dfab01",
+                    "green": "#0f7b6c",
+                    "blue": "#0b6e99",
+                    "purple": "#6940a5",
+                    "pink": "#ad1a72",
+                    "red": "#e03e3e"
+                }
+                bg_color = color_map.get(tag_color, "#e0e0e0")
+                tag_badges.append(
+                    f'<span style="display: inline-block; background-color: {bg_color}; color: white; '
+                    f'padding: 2px 8px; border-radius: 12px; font-size: 0.75em; margin: 2px; '
+                    f'white-space: nowrap;">{tag_name}</span>'
+                )
+            tags_html = " ".join(tag_badges)
+        else:
+            tags_html = "-"
+        
+        tags_list = [t["name"] for t in tags_data]
 
         # Filtering logic
         keep_paper = ("scalable oversight" in [t.lower() for t in tags_list]) or (relevance > 7)
@@ -63,7 +92,7 @@ def generate_markdown_table(papers):
             "pub_date": pub_date,
             "arxiv_url": arxiv_url,
             "key_insights": key_insights,
-            "tags_md": tags_md,
+            "tags_html": tags_html,
         })
 
     # Sort by Published Date descending
@@ -93,7 +122,7 @@ def generate_markdown_table(papers):
         md += '<tr style="vertical-align: top; height: 60px;">\n'
         md += f'<td style="padding: 8px;">{idx}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="{paper["arxiv_url"]}">{paper["title"]}</a></td>\n'
-        md += f'<td style="padding: 8px; font-size: 0.85em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{paper["tags_md"]}</td>\n'
+        md += f'<td style="padding: 8px; font-size: 0.85em;">{paper["tags_html"]}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap;">{date_display}</td>\n'
         md += f'<td style="padding: 8px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{paper["key_insights"]}</td>\n'
         md += '</tr>\n'
