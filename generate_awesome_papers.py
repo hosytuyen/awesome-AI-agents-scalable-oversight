@@ -58,22 +58,23 @@ def generate_markdown_table(papers):
                 color_map = {
                     "default": "lightgrey",
                     "gray": "grey",
-                    "brown": "brown",
+                    "brown": "8B4513",
                     "orange": "orange",
                     "yellow": "yellow",
-                    "green": "green",
+                    "green": "brightgreen",
                     "blue": "blue",
                     "purple": "purple",
                     "pink": "ff69b4",
                     "red": "red"
                 }
                 badge_color = color_map.get(tag_color, "lightgrey")
-                # URL encode the tag name
-                tag_encoded = tag_name.replace(" ", "%20")
+                # URL encode the tag name and replace spaces with underscores
+                tag_encoded = tag_name.replace(" ", "_").replace("-", "--")
+                # Use correct shields.io format: /badge/<LABEL>-<MESSAGE>-<COLOR>
                 tag_badges.append(
-                    f'<img src="https://img.shields.io/badge/{tag_encoded}-{badge_color}?style=flat-square" alt="{tag_name}">'
+                    f'<img src="https://img.shields.io/badge/{tag_encoded}-{badge_color}?style=for-the-badge" alt="{tag_name}" height="24">'
                 )
-            tags_html = " ".join(tag_badges)
+            tags_html = "<br>".join(tag_badges)
         else:
             tags_html = "-"
         
@@ -104,7 +105,7 @@ def generate_markdown_table(papers):
     md += '<thead>\n<tr>\n'
     md += '<th style="min-width: 30px; padding: 8px;">#</th>\n'
     md += '<th style="min-width: 250px; padding: 8px;">🧠 Title</th>\n'
-    md += '<th style="min-width: 150px; padding: 8px;">🏷️ Tags</th>\n'
+    md += '<th style="min-width: 180px; padding: 8px;">🏷️ Tags</th>\n'
     md += '<th style="min-width: 90px; padding: 8px;">📅 Date</th>\n'
     md += '<th style="min-width: 600px; padding: 8px;">💡 Key Insights</th>\n'
     md += '</tr>\n</thead>\n<tbody>\n'
@@ -119,10 +120,10 @@ def generate_markdown_table(papers):
             except:
                 pass
         
-        md += '<tr style="vertical-align: top; height: 60px;">\n'
+        md += '<tr style="vertical-align: top; height: auto;">\n'
         md += f'<td style="padding: 8px;">{idx}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="{paper["arxiv_url"]}">{paper["title"]}</a></td>\n'
-        md += f'<td style="padding: 8px; font-size: 0.85em;">{paper["tags_html"]}</td>\n'
+        md += f'<td style="padding: 8px;">{paper["tags_html"]}</td>\n'
         md += f'<td style="padding: 8px; white-space: nowrap;">{date_display}</td>\n'
         md += f'<td style="padding: 8px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{paper["key_insights"]}</td>\n'
         md += '</tr>\n'
