@@ -5,7 +5,6 @@ Fetches papers from arXiv based on configured search criteria.
 Handles paper metadata extraction and filtering.
 """
 
-from cgi import parse_multipart
 import arxiv
 import feedparser
 from datetime import datetime, timedelta
